@@ -1,0 +1,16 @@
+.lesson2{
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 2px solid #282c34;
+ }
+ 
+ .lesson2 .left-card{
+   width: 20%;
+   border-right: 2px solid #282c34;
+   padding: 5px;
+ }
+ 
+ .lesson2 .right-card{
+   width: 80%;
+   padding: 5px;
+ }
