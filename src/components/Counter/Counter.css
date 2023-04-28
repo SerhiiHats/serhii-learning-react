@@ -1,0 +1,11 @@
+.Counter span{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Counter button{
+    margin-right: 10px;
+    user-select: none;
+
+}
