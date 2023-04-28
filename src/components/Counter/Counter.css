@@ -7,5 +7,12 @@
 .Counter button{
     margin-right: 10px;
     user-select: none;
+}
 
+.Counter button:first-child:active{
+   background-color: green;
+}
+
+.Counter button:nth-child(2):active{
+    background-color: red;
 }
