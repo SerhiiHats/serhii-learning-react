@@ -8,117 +8,123 @@ import CounterSimple from "../CounterSimple/CounterSimple";
 import CounterCollback from "../CounterCollback/CounterCollback";
 import ConditionalRendering from "../ConditionalRendering/ConditionalRendering";
 import ConditionalRenderingTernary from "../ConditionalRenderingTernary/ConditionalRenderingTernary";
+import {Component} from "react";
 
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          (new doc.) Learn React
-        </a>
-        <a
-          className="App-link"
-          href="https://ru.legacy.reactjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          (old doc.) Learn React
-        </a>
-      </header>
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo"/>
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (new doc.) Learn React
+          </a>
+          <a
+            className="App-link"
+            href="https://ru.legacy.reactjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (old doc.) Learn React
+          </a>
+        </header>
 
-      <main>
-        <div className="main-container">
-          <div className='lesson1'>
-            <div className='left-card'>
-              <p className={"number-lesson"}>first lesson:</p>
-              <p>component: MyFirstComponent</p>
+        <main>
+          <div className="main-container">
+            <div className='lesson1'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>first lesson:</p>
+                <p>component: MyFirstComponent</p>
+              </div>
+              <div className='right-card'>
+                <MyFirstComponent color="red" size={16}/>
+                <MyFirstComponent color="blue" size={18}/>
+              </div>
             </div>
-            <div className='right-card'>
-              <MyFirstComponent color="red" size={16}/>
-              <MyFirstComponent color="blue" size={18}/>
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>secondary lesson:</p>
+                <p>component: WelcomeSimple</p>
+              </div>
+              <div className='right-card'>
+                <WelcomeSimple firstName="Serhii"/>
+                <WelcomeSimple/>
+              </div>
             </div>
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: Clock</p>
+                <p>-color from Array</p>
+                <p>-color from Random</p>
+              </div>
+              <div className='right-card'>
+                <Clock/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: CounterSimple</p>
+              </div>
+              <div className='right-card'>
+                <CounterSimple text={"Простой счетчик: "}/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: CounterCollback</p>
+              </div>
+              <div className='right-card'>
+                <CounterCollback text={"Простой счетчик с collback функц.: "} increment={1}/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: Counter</p>
+              </div>
+              <div className='right-card'>
+                <Counter/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: ConditionalRendering</p>
+              </div>
+              <div className='right-card'>
+                <ConditionalRendering/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: Conditional Rendering Ternary</p>
+              </div>
+              <div className='right-card'>
+                <ConditionalRenderingTernary/>
+                <ConditionalRenderingTernary countMessage={2}/>
+              </div>
+            </div>
+
           </div>
-          <div className='lesson2'>
-            <div className='left-card'>
-              <p className={"number-lesson"}>secondary lesson:</p>
-              <p>component: WelcomeSimple</p>
-            </div>
-            <div className='right-card'>
-              <WelcomeSimple firstName="Serhii"/>
-              <WelcomeSimple/>
-            </div>
-          </div>
-          <div className='lesson2'>
-            <div className='left-card'>
-              <p>component: Clock</p>
-              <p>-color from Array</p>
-              <p>-color from Random</p>
-            </div>
-            <div className='right-card'>
-              <Clock/>
-            </div>
-          </div>
+        </main>
+      </div>
+    );
+  }
 
-          <div className='lesson2'>
-            <div className='left-card'>
-              <p>component: CounterSimple</p>
-            </div>
-            <div className='right-card'>
-              <CounterSimple text={"Простой счетчик: "}/>
-            </div>
-          </div>
+  }
 
-          <div className='lesson2'>
-            <div className='left-card'>
-              <p>component: CounterCollback</p>
-            </div>
-            <div className='right-card'>
-              <CounterCollback text={"Простой счетчик с collback функц.: "} increment={1}/>
-            </div>
-          </div>
 
-          <div className='lesson2'>
-            <div className='left-card'>
-              <p>component: Counter</p>
-            </div>
-            <div className='right-card'>
-              <Counter/>
-            </div>
-          </div>
-
-          <div className='lesson2'>
-            <div className='left-card'>
-              <p>component: ConditionalRendering</p>
-            </div>
-            <div className='right-card'>
-              <ConditionalRendering/>
-            </div>
-          </div>
-
-          <div className='lesson2'>
-            <div className='left-card'>
-              <p>component: Conditional Rendering Ternary</p>
-            </div>
-            <div className='right-card'>
-              <ConditionalRenderingTernary/>
-              <ConditionalRenderingTernary countMessage={2}/>
-            </div>
-          </div>
-
-        </div>
-      </main>
-    </div>
-  );
-}
 
 export default App;
