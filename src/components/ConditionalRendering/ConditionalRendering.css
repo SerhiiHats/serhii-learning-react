@@ -1,0 +1,19 @@
+.counter-visible{
+    text-align: right;
+}
+
+.counter-visible button{
+    background-color: #61dafb;
+}
+
+.like{
+    width: 100px;
+    height: 100px;
+    border: 2px solid grey;
+    margin: 10px auto;
+    padding: 10px 10px 0 10px;
+}
+
+.like img{
+    width: 100%;
+}
