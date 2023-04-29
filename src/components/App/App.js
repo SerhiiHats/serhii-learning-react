@@ -5,6 +5,7 @@ import Clock from '../Clock/Clock';
 import MyFirstComponent from "../MyFirstComponent/MyFirstComponent";
 import Counter from "../Counter/Counter"
 import CounterSimple from "../CounterSimple/CounterSimple";
+import CounterCollback from "../CounterCollback/CounterCollback";
 
 
 function App() {
@@ -72,6 +73,15 @@ function App() {
             </div>
             <div className='right-card'>
               <CounterSimple text={"Простой счетчик: "}/>
+            </div>
+          </div>
+
+          <div className='lesson2'>
+            <div className='left-card'>
+              <p>component: CounterCollback</p>
+            </div>
+            <div className='right-card'>
+              <CounterCollback text={"Простой счетчик с collback функц.: "} increment={1} />
             </div>
           </div>
 

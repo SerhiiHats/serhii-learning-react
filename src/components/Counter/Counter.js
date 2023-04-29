@@ -16,11 +16,19 @@ class Counter extends Component {
     let index = (operand === -1) ? 0
       : (operand === this.state.count * -1) ? 1 : 2;
 
-    this.setState({
+    // не рекомендуемый вариант
+    // this.setState({
+    //   index: index,
+    //   count: this.state.count + operand,
+    //   timeUpdate: new Date(),
+    // });
+
+    //рекомендуемый вариант
+    this.setState((state)=>({
       index: index,
-      count: this.state.count + operand,
+      count: state.count + operand,
       timeUpdate: new Date(),
-    });
+    }));
 
     setTimeout(() => {
       this.setDefaultColor();
