@@ -1,8 +1,8 @@
-.counter-visible{
+.visible-counter{
     text-align: right;
 }
 
-.counter-visible button{
+.visible-counter button{
     background-color: #61dafb;
 }
 
@@ -12,6 +12,14 @@
     border: 2px solid grey;
     margin: 10px auto;
     padding: 10px 10px 0 10px;
+}
+
+.visible-likes{
+    text-align: right;
+}
+
+.visible-likes button{
+    background-color: #ff7f7f;
 }
 
 .like img{

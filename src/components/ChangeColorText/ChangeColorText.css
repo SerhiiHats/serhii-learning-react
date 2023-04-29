@@ -1,0 +1,5 @@
+.ChangeColorText p{
+    font-size: 18px;
+    font-weight: bold;
+    user-select: none;
+}

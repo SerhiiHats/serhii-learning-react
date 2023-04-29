@@ -9,9 +9,19 @@ import CounterCollback from "../CounterCollback/CounterCollback";
 import ConditionalRendering from "../ConditionalRendering/ConditionalRendering";
 import ConditionalRenderingTernary from "../ConditionalRenderingTernary/ConditionalRenderingTernary";
 import {Component} from "react";
+import ChangeColorText from "../ChangeColorText/ChangeColorText";
 
 class App extends Component {
 
+  state ={
+    visibleProps: true,
+  }
+
+  handlerVisibleProps(){
+    this.setState(
+      (state)=>({visibleProps: !state.visibleProps})
+    );
+  }
   render() {
     return (
       <div className="App">
@@ -103,7 +113,10 @@ class App extends Component {
                 <p>component: ConditionalRendering</p>
               </div>
               <div className='right-card'>
-                <ConditionalRendering/>
+                <ConditionalRendering
+                  visibleProps={this.state.visibleProps}
+                  handlerVisibleProps={()=>this.handlerVisibleProps()}
+                />
               </div>
             </div>
 
@@ -116,6 +129,36 @@ class App extends Component {
                 <ConditionalRenderingTernary countMessage={2}/>
               </div>
             </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: Change Color Text</p>
+              </div>
+              <div className='right-card'>
+               <ChangeColorText/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>third lesson:</p>
+                <p>component: </p>
+              </div>
+              <div className='right-card'>
+
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>fourth lesson:</p>
+                <p>component: </p>
+              </div>
+              <div className='right-card'>
+
+              </div>
+            </div>
+
 
           </div>
         </main>
