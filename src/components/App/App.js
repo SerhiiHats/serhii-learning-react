@@ -111,6 +111,7 @@ class App extends Component {
             <div className='lesson2'>
               <div className='left-card'>
                 <p>component: ConditionalRendering</p>
+                <p>unwatch likes with Parent</p>
               </div>
               <div className='right-card'>
                 <ConditionalRendering

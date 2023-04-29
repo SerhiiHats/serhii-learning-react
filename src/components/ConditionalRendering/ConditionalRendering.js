@@ -23,7 +23,7 @@ class ConditionalRendering extends Component {
         </div>
         {this.state.counterVisible && <Counter/>}
         <div className={"visible-likes"}>
-          <button onClick={() => this.props.handlerVisibleProps()}>unwatch likes</button>
+          <button onClick={() => this.props.handlerVisibleProps()}>unwatch likes with Parent</button>
         </div>
         {this.props.visibleProps &&
           <div className={"like"} onClick={() => {
