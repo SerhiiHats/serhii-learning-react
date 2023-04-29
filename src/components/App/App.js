@@ -4,6 +4,7 @@ import WelcomeSimple from '../WelcomeSimple/WelcomeSimple';
 import Clock from '../Clock/Clock';
 import MyFirstComponent from "../MyFirstComponent/MyFirstComponent";
 import Counter from "../Counter/Counter"
+import CounterSimple from "../CounterSimple/CounterSimple";
 
 
 function App() {
@@ -35,14 +36,20 @@ function App() {
       <main>
         <div className="main-container">
           <div className='lesson1'>
-            <div className='left-card'>component: MyFirstComponent</div>
+            <div className='left-card'>
+              <p className={"number-lesson"}>first lesson:</p>
+              <p>component: MyFirstComponent</p>
+            </div>
             <div className='right-card'>
               <MyFirstComponent color="red" size={16}/>
               <MyFirstComponent color="blue" size={18}/>
             </div>
           </div>
           <div className='lesson2'>
-            <div className='left-card'>component: WelcomeSimple</div>
+            <div className='left-card'>
+              <p className={"number-lesson"}>secondary lesson:</p>
+              <p>component: WelcomeSimple</p>
+              </div>
             <div className='right-card'>
               <WelcomeSimple firstName="Serhii"/>
               <WelcomeSimple/>
@@ -56,6 +63,15 @@ function App() {
             </div>
             <div className='right-card'>
               <Clock/>
+            </div>
+          </div>
+
+          <div className='lesson2'>
+            <div className='left-card'>
+              <p>component:CounterSimple</p>
+            </div>
+            <div className='right-card'>
+              <CounterSimple/>
             </div>
           </div>
 
