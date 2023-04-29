@@ -10,18 +10,22 @@ import ConditionalRendering from "../ConditionalRendering/ConditionalRendering";
 import ConditionalRenderingTernary from "../ConditionalRenderingTernary/ConditionalRenderingTernary";
 import {Component} from "react";
 import ChangeColorText from "../ChangeColorText/ChangeColorText";
+import ListSimple from "../ListSimple/ListSimple";
+import List from "../List/List";
 
 class App extends Component {
 
-  state ={
+  state = {
     visibleProps: true,
+    arrayColor:["red", "yellow", "green"],
   }
 
-  handlerVisibleProps(){
+  handlerVisibleProps() {
     this.setState(
-      (state)=>({visibleProps: !state.visibleProps})
+      (state) => ({visibleProps: !state.visibleProps})
     );
   }
+
   render() {
     return (
       <div className="App">
@@ -116,7 +120,7 @@ class App extends Component {
               <div className='right-card'>
                 <ConditionalRendering
                   visibleProps={this.state.visibleProps}
-                  handlerVisibleProps={()=>this.handlerVisibleProps()}
+                  handlerVisibleProps={() => this.handlerVisibleProps()}
                 />
               </div>
             </div>
@@ -136,24 +140,36 @@ class App extends Component {
                 <p>component: Change Color Text</p>
               </div>
               <div className='right-card'>
-               <ChangeColorText/>
+                <ChangeColorText text={"Компоненту передали цвет (violet) и массив цветов (grey, orange, indigo, aquamarine"} color={"violet"} arrayColor={["grey", "orange", "indigo", "aquamarine"]}/>
+                <ChangeColorText text={"Компоненту не передавали цвет но передан массив цветов (red, yellow, green)"} arrayColor={this.state.arrayColor}/>
+                <ChangeColorText text={"Компоненту передали цвет (tomato) но не передали массив цветов"} color={"tomato"}/>
+                <ChangeColorText />
               </div>
             </div>
 
             <div className='lesson2'>
               <div className='left-card'>
                 <p className={"number-lesson"}>third lesson:</p>
-                <p>component: </p>
+                <p>component: Simple List</p>
               </div>
               <div className='right-card'>
-
+                <ListSimple/>
               </div>
             </div>
 
             <div className='lesson2'>
               <div className='left-card'>
-                <p className={"number-lesson"}>fourth lesson:</p>
-                <p>component: </p>
+                <p className={"number-lesson"}>fourth lesson: List</p>
+                <p>component: List</p>
+              </div>
+              <div className='right-card'>
+                <List/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component:</p>
               </div>
               <div className='right-card'>
 
@@ -167,8 +183,7 @@ class App extends Component {
     );
   }
 
-  }
-
+}
 
 
 export default App;
