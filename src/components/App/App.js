@@ -7,7 +7,7 @@ import Counter from "../Counter/Counter"
 import CounterSimple from "../CounterSimple/CounterSimple";
 import CounterCollback from "../CounterCollback/CounterCollback";
 import ConditionalRendering from "../ConditionalRendering/ConditionalRendering";
-import ConditionalRenderingTernarn from "../ConditionalRenderingTernarn/ConditionalRenderingTernarn";
+import ConditionalRenderingTernary from "../ConditionalRenderingTernary/ConditionalRenderingTernary";
 
 
 function App() {
@@ -110,8 +110,8 @@ function App() {
               <p>component: Conditional Rendering Ternary</p>
             </div>
             <div className='right-card'>
-              <ConditionalRenderingTernarn/>
-              <ConditionalRenderingTernarn countMessage={2}/>
+              <ConditionalRenderingTernary/>
+              <ConditionalRenderingTernary countMessage={2}/>
             </div>
           </div>
 

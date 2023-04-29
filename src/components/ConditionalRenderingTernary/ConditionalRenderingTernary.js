@@ -1,7 +1,7 @@
 import {Component} from "react";
-import "./ConditionalRenderingTernarn.css"
+import "./ConditionalRenderingTernary.css"
 
-class ConditionalRenderingTernarn extends Component{
+class ConditionalRenderingTernary extends Component{
   messages = ["hello", "Hi, how are you", "Coll me", "Super write me", "I am angry"];
   // messages = []
 
@@ -19,4 +19,4 @@ class ConditionalRenderingTernarn extends Component{
   }
 }
 
-export default ConditionalRenderingTernarn;
+export default ConditionalRenderingTernary;
