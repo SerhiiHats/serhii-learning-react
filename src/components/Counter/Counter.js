@@ -2,7 +2,6 @@ import {Component} from "react";
 import "./Counter.css";
 
 class Counter extends Component {
-  timeUpdate;
 
   state = {
     count: 0,
@@ -10,6 +9,7 @@ class Counter extends Component {
     arrayOfColor: ["red", "black", "green"],
     index: 1,
     visible: true,
+    timeUpdate: 0
   }
 
   handlerCounter(operand = 1) {
@@ -19,18 +19,17 @@ class Counter extends Component {
     this.setState({
       index: index,
       count: this.state.count + operand,
+      timeUpdate: new Date(),
     });
-  }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    this.timeUpdate = new Date();
     setTimeout(() => {
-      this.setDefaultColor()
-    }, 2000);
+      this.setDefaultColor();
+    }, 1500);
+
   }
 
   setDefaultColor() {
-    if ((new Date() - this.timeUpdate) > 1500) {
+    if ((new Date() - this.state.timeUpdate) > 1000) {
       this.setState({index: 1});
     }
   }

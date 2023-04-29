@@ -71,7 +71,7 @@ function App() {
               <p>component:CounterSimple</p>
             </div>
             <div className='right-card'>
-              <CounterSimple/>
+              <CounterSimple text={"Простой счетчик: "}/>
             </div>
           </div>
 
