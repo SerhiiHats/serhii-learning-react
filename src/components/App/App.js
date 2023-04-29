@@ -6,6 +6,8 @@ import MyFirstComponent from "../MyFirstComponent/MyFirstComponent";
 import Counter from "../Counter/Counter"
 import CounterSimple from "../CounterSimple/CounterSimple";
 import CounterCollback from "../CounterCollback/CounterCollback";
+import ConditionalRendering from "../ConditionalRendering/ConditionalRendering";
+import ConditionalRenderingTernarn from "../ConditionalRenderingTernarn/ConditionalRenderingTernarn";
 
 
 function App() {
@@ -50,7 +52,7 @@ function App() {
             <div className='left-card'>
               <p className={"number-lesson"}>secondary lesson:</p>
               <p>component: WelcomeSimple</p>
-              </div>
+            </div>
             <div className='right-card'>
               <WelcomeSimple firstName="Serhii"/>
               <WelcomeSimple/>
@@ -69,7 +71,7 @@ function App() {
 
           <div className='lesson2'>
             <div className='left-card'>
-              <p>component:CounterSimple</p>
+              <p>component: CounterSimple</p>
             </div>
             <div className='right-card'>
               <CounterSimple text={"Простой счетчик: "}/>
@@ -81,16 +83,35 @@ function App() {
               <p>component: CounterCollback</p>
             </div>
             <div className='right-card'>
-              <CounterCollback text={"Простой счетчик с collback функц.: "} increment={1} />
+              <CounterCollback text={"Простой счетчик с collback функц.: "} increment={1}/>
             </div>
           </div>
 
           <div className='lesson2'>
             <div className='left-card'>
-              <p>component:Counter</p>
+              <p>component: Counter</p>
             </div>
             <div className='right-card'>
               <Counter/>
+            </div>
+          </div>
+
+          <div className='lesson2'>
+            <div className='left-card'>
+              <p>component: ConditionalRendering</p>
+            </div>
+            <div className='right-card'>
+              <ConditionalRendering/>
+            </div>
+          </div>
+
+          <div className='lesson2'>
+            <div className='left-card'>
+              <p>component: Conditional Rendering Ternary</p>
+            </div>
+            <div className='right-card'>
+              <ConditionalRenderingTernarn/>
+              <ConditionalRenderingTernarn countMessage={2}/>
             </div>
           </div>
 

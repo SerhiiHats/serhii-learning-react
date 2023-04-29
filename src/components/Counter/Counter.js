@@ -5,7 +5,6 @@ class Counter extends Component {
 
   state = {
     count: 0,
-    color: "black",
     arrayOfColor: ["red", "black", "green"],
     index: 1,
     visible: true,
@@ -38,7 +37,9 @@ class Counter extends Component {
 
   setDefaultColor() {
     if ((new Date() - this.state.timeUpdate) > 1000) {
-      this.setState({index: 1});
+      this.setState({
+        index: 1
+      });
     }
   }
 
