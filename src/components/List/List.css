@@ -1,0 +1,13 @@
+.List {
+    margin: 0;
+    list-style: none;
+}
+
+.List li {
+    text-align: left;
+}
+
+
+.row-input-button button {
+    margin-left: 10px;
+}

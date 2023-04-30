@@ -1,58 +1,46 @@
 import {Component} from "react";
-import { v4 as uuidv4 } from 'uuid';
+// import {v4 as uuidv4} from 'uuid';
 import "./List.css"
 
 class List extends Component {
+
   state = {
-    inputValue: "",
+    text: ""
   }
 
-  // render() {
-  //   const {arr,name, addHandler, ...props} = this.props;
-  //   // const arr = this.props.arr;
-  //
-  //   console.log(arr)
-  //
-  //   const list = arr.map((e,i)=>{
-  //     return <p key={uuidv4()}>{i} - {e}</p>
-  //   })
-  //
-  //   return (
-  //     <div>
-  //
-  //       {name}
-  //       {list}
-  //
-  //       <button onClick={()=>{addHandler("Добавленное поле")}}> ADD 1 </button>
-  //
-  //     </div>
-  //   );
-  // }
+  addTextToState(even) {
+    console.log(even.target.value)
+    this.setState({
+      text: even.target.value
+    });
+  }
 
-  // addItem(text){
-  //   return(
-  //     <p>text</p>
-  //   )
-  // }
+  cleanInput(even){
+    console.log(even.target.value)
+
+  }
 
   render() {
-    return (
-      <div>
-        <p>List</p>
-        {/*{this.addItem()}*/}
-        <form>
-          {/*<input/>*/}
-          {/*<input type="text" value={5}/>*/}
-          {/*<button onClick={()=>addItem(this.state.inputValue)}> ADD To Do</button>*/}
+    const {arrayForList, addHandlerList} = this.props;
 
-          <input type="text" value={this.state.inputValue} onChange={
-            (e) => {
-              this.setState({inputValue: e.target.value})
-            }
-          }/>
-          <button> ADD To Do</button>
-        </form>
+    console.log("from list", arrayForList)
+
+    const liElement = arrayForList.map((elem, index) => {
+      return <li className={"item-li-" + index} key={index}>{index} - {elem}</li>
+    })
+
+    return (
+      <div className={"wrap-list"}>
+        <ul className={"List"}>
+          {liElement}<
+          /ul>
+        <div className={"row-input-button"}>
+          <input id={"text-to-add"} type={"text"} onChange={(e) => this.addTextToState(e)}/>
+          <button id={"bnt-add-text"} onClick={() => {addHandlerList(this.state.text)}}>ADD To Do
+          </button>
+        </div>
       </div>
+
     );
   }
 }

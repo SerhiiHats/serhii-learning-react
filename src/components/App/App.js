@@ -28,8 +28,12 @@ class App extends Component {
     );
   }
 
-  addItemListHandler(){
+  addHadlerList(item){
+    this.setState({
+      arrayOfRainbaw: [...this.state.arrayOfRainbaw, item]
+    });
 
+    console.log(this.state)
   }
 
   render() {
@@ -168,20 +172,22 @@ class App extends Component {
 
             <div className='lesson3'>
               <div className='left-card'>
-                <p className={"number-lesson"}>fourth lesson: List</p>
                 <p>component: List</p>
+                <p>with button add list</p>
               </div>
               <div className='right-card'>
-                <List/>
+                <List arrayForList={this.state.arrayOfRainbaw} addHandlerList={(elem)=>{
+                this.addHadlerList(elem)}
+                }/>
               </div>
             </div>
 
             <div className='lesson2'>
               <div className='left-card'>
+                <p className={"number-lesson"}>fourth lesson: List</p>
                 <p>component:</p>
               </div>
               <div className='right-card'>
-
               </div>
             </div>
 
