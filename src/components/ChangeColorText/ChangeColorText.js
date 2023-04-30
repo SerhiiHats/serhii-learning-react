@@ -42,10 +42,6 @@ class ChangeColorText extends Component {
     });
   }
 
-
-
-
-
   render() {
     const {text} = this.props;
     return (

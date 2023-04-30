@@ -18,12 +18,18 @@ class App extends Component {
   state = {
     visibleProps: true,
     arrayColor:["red", "yellow", "green"],
+    arrayOfMenu: ["Привет, мир", "Знакомство с JSX", "Рендеринг элементов", "Компоненты и пропсы", "Состояние и жизненный цикл", "Обработка событий", "Условный рендеринг", "Списки и ключи", "Формы", "Подъём состояния", "Композиция против наследования", "Философия React"],
+    arrayOfRainbaw: ["red", "orange", "yellow", "green", "blue", "indigo", "violet"],
   }
 
   handlerVisibleProps() {
     this.setState(
       (state) => ({visibleProps: !state.visibleProps})
     );
+  }
+
+  addItemListHandler(){
+
   }
 
   render() {
@@ -147,17 +153,20 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson3'>
               <div className='left-card'>
                 <p className={"number-lesson"}>third lesson:</p>
                 <p>component: Simple List</p>
               </div>
               <div className='right-card'>
+                <ListSimple listItem={this.state.arrayOfMenu}/>
+                <ListSimple listItem={this.state.arrayOfRainbaw}/>
+                <ListSimple listItem={["Компоненты и пропсы", "Состояние и жизненный цикл", "Обработка событий", "Условный рендеринг", "Списки и ключи", "Формы", "Подъём состояния", "Композиция против наследования"]}/>
                 <ListSimple/>
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson3'>
               <div className='left-card'>
                 <p className={"number-lesson"}>fourth lesson: List</p>
                 <p>component: List</p>
