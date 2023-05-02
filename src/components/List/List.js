@@ -15,6 +15,9 @@ class List extends Component {
     });
   }
 
+  cleanInput(e){
+    console.log("2-qrkbr", e.target)
+  }
   cleanInput(even){
     console.log(even.target.value)
 
@@ -36,7 +39,7 @@ class List extends Component {
           /ul>
         <div className={"row-input-button"}>
           <input id={"text-to-add"} type={"text"} onChange={(e) => this.addTextToState(e)}/>
-          <button id={"bnt-add-text"} onClick={() => {addHandlerList(this.state.text)}}>ADD To Do
+          <button id={"bnt-add-text"} onClick={() => {addHandlerList(this.state.text)}} onClick={(e) =>this.cleanInput(e)}>ADD To Do
           </button>
         </div>
       </div>

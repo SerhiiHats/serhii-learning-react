@@ -1,13 +1,13 @@
-.App-header {
+.Header {
     background-color: #89B374;
     color: #505050;
     padding: 10px;
 }
 
-.App-header h1 {
+.Header h1 {
     color: #f1f1f1;
 }
 
-.App-header p {
+.Header p {
     margin: 0;
 }

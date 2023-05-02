@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     const { aboutTask, descriptionTask } = this.props;
     return (
-      <header className="App-header">
+      <header className="Header">
         <Title title={"From Header"}/>
         <h1>{aboutTask || "aboutTask"}</h1>
         <p>{descriptionTask || "descriptionTask"}</p>

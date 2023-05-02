@@ -185,8 +185,7 @@ class App extends Component {
               <div className='right-card'>
                 <List arrayForList={this.state.arrayOfRainbaw} addHandlerList={(elem) => {
                   this.addHadlerList(elem)
-                }
-                } />
+                }} />
               </div>
             </div>
 
