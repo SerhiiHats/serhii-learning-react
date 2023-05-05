@@ -15,6 +15,8 @@ import List from "../List/List";
 import Header from "../Header/Header";
 import {changeTitle} from "../Title/action";
 import {connect} from "react-redux";
+import NameForm from "../NameForm/NameForm";
+import NotControlForm from "../NotControlForm/NotControlForm";
 
 class App extends Component {
 
@@ -184,6 +186,25 @@ class App extends Component {
                 <List arrayForList={this.state.arrayOfRainbaw} addHandlerList={(elem) => {
                   this.addHadlerList(elem)
                 }} />
+              </div>
+            </div>
+
+            <div className='lesson4'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>fourth lesson:</p>
+                <p>component: Control Forms</p>
+              </div>
+              <div className='right-card'>
+               <NameForm/>
+              </div>
+            </div>
+
+            <div className='lesson4'>
+              <div className='left-card'>
+                <p>component: Not control Forms</p>
+              </div>
+              <div className='right-card'>
+                <NotControlForm/>
               </div>
             </div>
 
