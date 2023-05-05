@@ -17,6 +17,8 @@ import {changeTitle} from "../Title/action";
 import {connect} from "react-redux";
 import NameForm from "../NameForm/NameForm";
 import NotControlForm from "../NotControlForm/NotControlForm";
+import NameTextArea from "../NameTextArea/NameTextArea";
+import NameSelect from "../NameSelect/NameSelect";
 
 class App extends Component {
 
@@ -205,6 +207,24 @@ class App extends Component {
               </div>
               <div className='right-card'>
                 <NotControlForm/>
+              </div>
+            </div>
+
+            <div className='lesson4'>
+              <div className='left-card'>
+                <p>component: Control TextArea</p>
+              </div>
+              <div className='right-card'>
+                <NameTextArea/>
+              </div>
+            </div>
+
+            <div className='lesson4'>
+              <div className='left-card'>
+                <p>component: Select</p>
+              </div>
+              <div className='right-card'>
+                <NameSelect/>
               </div>
             </div>
 

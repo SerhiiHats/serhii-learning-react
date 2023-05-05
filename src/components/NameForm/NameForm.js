@@ -23,6 +23,9 @@ class NameForm extends Component{
           Имя:
           <input type={"text"} name={"name"} onChange={(e)=>this.handlerChange(e)} value={this.state.value}/>
         </label>
+        <br/>
+        <textarea onChange={(e)=>this.handlerChange(e)} value={this.state.value}/>
+        <br/>
         <input className={"Submit"} type={"submit"} value={"Отправить"} />
       </form>
     );
