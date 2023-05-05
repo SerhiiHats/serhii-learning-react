@@ -35,8 +35,6 @@ class App extends Component {
     this.setState({
       arrayOfRainbaw: [...this.state.arrayOfRainbaw, item]
     });
-
-    console.log(this.state)
   }
 
   render() {
@@ -180,7 +178,7 @@ class App extends Component {
             <div className='lesson3'>
               <div className='left-card'>
                 <p>component: List</p>
-                <p>with button add list</p>
+                <p>with input, button add list, clean input, press Enter to add</p>
               </div>
               <div className='right-card'>
                 <List arrayForList={this.state.arrayOfRainbaw} addHandlerList={(elem) => {

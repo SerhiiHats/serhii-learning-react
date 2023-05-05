@@ -9,25 +9,17 @@ class List extends Component {
   }
 
   addTextToState(even) {
-    console.log(even.target.value)
     this.setState({
       text: even.target.value
     });
   }
 
-  cleanInput(e){
-    console.log("2-qrkbr", e.target)
-  }
-  cleanInput(even){
-    console.log(even.target.value)
-
+  cleanInput(){
+    this.setState({text: ""});
   }
 
   render() {
     const {arrayForList, addHandlerList} = this.props;
-
-    console.log("from list", arrayForList)
-
     const liElement = arrayForList.map((elem, index) => {
       return <li className={"item-li-" + index} key={index}>{index} - {elem}</li>
     })
@@ -38,12 +30,24 @@ class List extends Component {
           {liElement}<
           /ul>
         <div className={"row-input-button"}>
-          <input id={"text-to-add"} type={"text"} onChange={(e) => this.addTextToState(e)}/>
-          <button id={"bnt-add-text"} onClick={() => {addHandlerList(this.state.text)}} onClick={(e) =>this.cleanInput(e)}>ADD To Do
+          <input id={"text-to-add"} type={"text"} onChange={(e) => this.addTextToState(e)} value={this.state.text} onKeyDown={
+            (e) =>{
+            if(e.key !=="Enter"){
+              return;
+            }
+            addHandlerList(this.state.text)
+            this.cleanInput();
+          }
+          }/>
+          <button id={"bnt-add-text"} onClick={
+            () => {
+              addHandlerList(this.state.text);
+              this.cleanInput();
+            }
+          } >ADD To Do
           </button>
         </div>
       </div>
-
     );
   }
 }
