@@ -8,7 +8,7 @@ import CounterSimple from "../CounterSimple/CounterSimple";
 import CounterCollback from "../CounterCollback/CounterCollback";
 import ConditionalRendering from "../ConditionalRendering/ConditionalRendering";
 import ConditionalRenderingTernary from "../ConditionalRenderingTernary/ConditionalRenderingTernary";
-import { Component } from "react";
+import {Component} from "react";
 import ChangeColorText from "../ChangeColorText/ChangeColorText";
 import ListSimple from "../ListSimple/ListSimple";
 import List from "../List/List";
@@ -19,6 +19,7 @@ import NameForm from "../NameForm/NameForm";
 import NotControlForm from "../NotControlForm/NotControlForm";
 import NameTextArea from "../NameTextArea/NameTextArea";
 import NameSelect from "../NameSelect/NameSelect";
+import FormFeedback from "../FormFeedback/FormFeedback";
 
 class App extends Component {
 
@@ -27,11 +28,12 @@ class App extends Component {
     arrayColor: ["red", "yellow", "green"],
     arrayOfMenu: ["Привет, мир", "Знакомство с JSX", "Рендеринг элементов", "Компоненты и пропсы", "Состояние и жизненный цикл", "Обработка событий", "Условный рендеринг", "Списки и ключи", "Формы", "Подъём состояния", "Композиция против наследования", "Философия React"],
     arrayOfRainbaw: ["red", "orange", "yellow", "green", "blue", "indigo", "violet"],
+    requestForm: false,
   }
 
   handlerVisibleProps() {
     this.setState(
-      (state) => ({ visibleProps: !state.visibleProps })
+      (state) => ({visibleProps: !state.visibleProps})
     );
   }
 
@@ -39,6 +41,10 @@ class App extends Component {
     this.setState({
       arrayOfRainbaw: [...this.state.arrayOfRainbaw, item]
     });
+  }
+
+  handlerForm(obj){
+    this.setState({requestForm:obj})
   }
 
   render() {
@@ -49,7 +55,7 @@ class App extends Component {
 
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo"/>
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -79,8 +85,8 @@ class App extends Component {
                 <p>component: MyFirstComponent</p>
               </div>
               <div className='right-card'>
-                <MyFirstComponent color="red" size={16} />
-                <MyFirstComponent color="blue" size={18} />
+                <MyFirstComponent color="red" size={16}/>
+                <MyFirstComponent color="blue" size={18}/>
               </div>
             </div>
             <div className='lesson2'>
@@ -89,8 +95,8 @@ class App extends Component {
                 <p>component: WelcomeSimple</p>
               </div>
               <div className='right-card'>
-                <WelcomeSimple firstName="Serhii" />
-                <WelcomeSimple />
+                <WelcomeSimple firstName="Serhii"/>
+                <WelcomeSimple/>
               </div>
             </div>
             <div className='lesson2'>
@@ -100,7 +106,7 @@ class App extends Component {
                 <p>-color from Random</p>
               </div>
               <div className='right-card'>
-                <Clock />
+                <Clock/>
               </div>
             </div>
 
@@ -109,7 +115,7 @@ class App extends Component {
                 <p>component: CounterSimple</p>
               </div>
               <div className='right-card'>
-                <CounterSimple text={"Простой счетчик: "} />
+                <CounterSimple text={"Простой счетчик: "}/>
               </div>
             </div>
 
@@ -118,7 +124,7 @@ class App extends Component {
                 <p>component: CounterCollback</p>
               </div>
               <div className='right-card'>
-                <CounterCollback text={"Простой счетчик с collback функц.: "} increment={1} />
+                <CounterCollback text={"Простой счетчик с collback функц.: "} increment={1}/>
               </div>
             </div>
 
@@ -127,7 +133,7 @@ class App extends Component {
                 <p>component: Counter</p>
               </div>
               <div className='right-card'>
-                <Counter />
+                <Counter/>
               </div>
             </div>
 
@@ -149,8 +155,8 @@ class App extends Component {
                 <p>component: Conditional Rendering Ternary</p>
               </div>
               <div className='right-card'>
-                <ConditionalRenderingTernary />
-                <ConditionalRenderingTernary countMessage={2} />
+                <ConditionalRenderingTernary/>
+                <ConditionalRenderingTernary countMessage={2}/>
               </div>
             </div>
 
@@ -159,10 +165,14 @@ class App extends Component {
                 <p>component: Change Color Text</p>
               </div>
               <div className='right-card'>
-                <ChangeColorText text={"Компоненту передали цвет (violet) и массив цветов (grey, orange, indigo, aquamarine"} color={"violet"} arrayColor={["grey", "orange", "indigo", "aquamarine"]} />
-                <ChangeColorText text={"Компоненту не передавали цвет но передан массив цветов (red, yellow, green)"} arrayColor={this.state.arrayColor} />
-                <ChangeColorText text={"Компоненту передали цвет (tomato) но не передали массив цветов"} color={"tomato"} />
-                <ChangeColorText />
+                <ChangeColorText
+                  text={"Компоненту передали цвет (violet) и массив цветов (grey, orange, indigo, aquamarine"}
+                  color={"violet"} arrayColor={["grey", "orange", "indigo", "aquamarine"]}/>
+                <ChangeColorText text={"Компоненту не передавали цвет но передан массив цветов (red, yellow, green)"}
+                                 arrayColor={this.state.arrayColor}/>
+                <ChangeColorText text={"Компоненту передали цвет (tomato) но не передали массив цветов"}
+                                 color={"tomato"}/>
+                <ChangeColorText/>
               </div>
             </div>
 
@@ -172,10 +182,11 @@ class App extends Component {
                 <p>component: Simple List</p>
               </div>
               <div className='right-card'>
-                <ListSimple listItem={this.state.arrayOfMenu} />
-                <ListSimple listItem={this.state.arrayOfRainbaw} />
-                <ListSimple listItem={["Компоненты и пропсы", "Состояние и жизненный цикл", "Обработка событий", "Условный рендеринг", "Списки и ключи", "Формы", "Подъём состояния", "Композиция против наследования"]} />
-                <ListSimple />
+                <ListSimple listItem={this.state.arrayOfMenu}/>
+                <ListSimple listItem={this.state.arrayOfRainbaw}/>
+                <ListSimple
+                  listItem={["Компоненты и пропсы", "Состояние и жизненный цикл", "Обработка событий", "Условный рендеринг", "Списки и ключи", "Формы", "Подъём состояния", "Композиция против наследования"]}/>
+                <ListSimple/>
               </div>
             </div>
 
@@ -187,7 +198,7 @@ class App extends Component {
               <div className='right-card'>
                 <List arrayForList={this.state.arrayOfRainbaw} addHandlerList={(elem) => {
                   this.addHadlerList(elem)
-                }} />
+                }}/>
               </div>
             </div>
 
@@ -197,7 +208,7 @@ class App extends Component {
                 <p>component: Control Forms</p>
               </div>
               <div className='right-card'>
-               <NameForm/>
+                <NameForm/>
               </div>
             </div>
 
@@ -228,6 +239,15 @@ class App extends Component {
               </div>
             </div>
 
+            <div className='lesson4'>
+              <div className='left-card'>
+                <p>component: Form feedback</p>
+              </div>
+              <div className='right-card'>
+                <FormFeedback handlerForm={(obj)=>this.handlerForm(obj)} requestForm={this.state.requestForm}/>
+              </div>
+            </div>
+
             <div className='lesson2'>
               <div className='left-card'>
                 <p className={"number-lesson"}>fourth lesson: List</p>
@@ -238,7 +258,7 @@ class App extends Component {
             </div>
             {this.props.dispatch.log}
             <Header/>
-            <button onClick={()=>dispatch(changeTitle("change Store From App"))}>Click from App</button>
+            <button  onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
 
           </div>
         </main>
@@ -249,7 +269,7 @@ class App extends Component {
 }
 
 
-const map = () =>{
+const map = () => {
 
 }
 
