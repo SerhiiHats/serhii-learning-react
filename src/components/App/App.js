@@ -20,6 +20,8 @@ import NotControlForm from "../NotControlForm/NotControlForm";
 import NameTextArea from "../NameTextArea/NameTextArea";
 import NameSelect from "../NameSelect/NameSelect";
 import FormFeedback from "../FormFeedback/FormFeedback";
+import ListRedux from "../ListRedux/ListRedux";
+
 
 class App extends Component {
 
@@ -107,6 +109,15 @@ class App extends Component {
               </div>
               <div className='right-card'>
                 <Clock/>
+              </div>
+            </div>
+
+            <div className='lesson2'>
+              <div className='left-card'>
+                <p>component: ListRedux</p>
+              </div>
+              <div className='right-card'>
+                <ListRedux />
               </div>
             </div>
 
@@ -250,10 +261,11 @@ class App extends Component {
 
             <div className='lesson2'>
               <div className='left-card'>
-                <p className={"number-lesson"}>fourth lesson: List</p>
-                <p>component:</p>
+                <p className={"number-lesson"}>fourth lesson:</p>
+                <p>component: ListRedux</p>
               </div>
               <div className='right-card'>
+                <ListRedux/>
               </div>
             </div>
             {this.props.dispatch.log}
