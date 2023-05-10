@@ -1,11 +1,16 @@
-.component-post{
+.component-post {
   text-align: left;
   padding-left: 10px;
 
-  .viewLoader{
+  .viewLoader {
     width: 150px;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .btnForView {
+    margin: 20px 0;
+    padding: 10px;
   }
 }
 

@@ -24,6 +24,7 @@ import ListRedux from "../ListRedux/ListRedux";
 import ToDoAnsynchron from "../ToDoAnsynchron/ToDoAnsynchron";
 import FuncComp from "../FuncComp/FuncComp";
 import Post from "../Post/Post";
+import ToDoFromState from "../ToDoFromState/ToDoFromState";
 
 
 class App extends Component {
@@ -48,8 +49,8 @@ class App extends Component {
     });
   }
 
-  handlerForm(obj){
-    this.setState({requestForm:obj})
+  handlerForm(obj) {
+    this.setState({requestForm: obj})
   }
 
   render() {
@@ -120,7 +121,7 @@ class App extends Component {
                 <p>component: ListRedux</p>
               </div>
               <div className='right-card'>
-                <ListRedux />
+                <ListRedux/>
               </div>
             </div>
 
@@ -258,7 +259,7 @@ class App extends Component {
                 <p>component: Form feedback</p>
               </div>
               <div className='right-card'>
-                <FormFeedback handlerForm={(obj)=>this.handlerForm(obj)} requestForm={this.state.requestForm}/>
+                <FormFeedback handlerForm={(obj) => this.handlerForm(obj)} requestForm={this.state.requestForm}/>
               </div>
             </div>
 
@@ -268,7 +269,7 @@ class App extends Component {
                 <p>component: Post from axios and write to inner state without Redux</p>
               </div>
               <div className='right-card'>
-              <Post/>
+                <Post/>
               </div>
             </div>
 
@@ -278,7 +279,7 @@ class App extends Component {
                 <p>component: TODO from axios and write to inner State</p>
               </div>
               <div className='right-card'>
-                todo
+                <ToDoFromState/>
               </div>
             </div>
 
@@ -294,7 +295,7 @@ class App extends Component {
             </div>
             {this.props.dispatch.log}
             <Header/>
-            <button  onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
+            <button onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
 
             <div className='lesson'>
               <div className='left-card'>

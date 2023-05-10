@@ -1,0 +1,32 @@
+.containerToDo {
+  text-align: left;
+  padding-left: 10px;
+
+  .viewLoader {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .btnForView{
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  .rowTodo{
+    border: 1px solid gray;
+    margin: 0;
+    padding: 2px 0;
+  }
+
+  .listCompleted{
+    background-color: #94b21b;
+  }
+
+  .listUncompleted{
+    background-color: lightgray;
+  }
+}
+
+
+

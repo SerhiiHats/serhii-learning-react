@@ -7,7 +7,9 @@ class Post extends Component {
 
   state = {
     posts: [],
+    visible: true,
   }
+
 
   componentDidMount() {
     axios("https://jsonplaceholder.typicode.com/posts")
@@ -15,16 +17,21 @@ class Post extends Component {
   }
 
   render() {
+
     const postsMap = this.state.posts.map((post) => {
       return <p key={post.id}>{post.id} : {post.title}</p>
     })
     return (
-      <div className={"component-post"}>
+      <div  className={"component-post"}>
         <div className={"viewLoader"}>{!this.state.posts.length && <Loader/>}</div>
-        {this.state.posts.length && postsMap}
+        <button className={"btnForView"} onClick={() => this.setState({visible: !this.state.visible})}>Показать/скрыть
+        </button>
+        {this.state.visible && postsMap}
       </div>
     );
   }
+
+
 }
 
 export default Post;
