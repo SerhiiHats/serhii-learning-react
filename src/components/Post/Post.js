@@ -11,17 +11,17 @@ class Post extends Component {
   componentDidMount() {
     axios("https://jsonplaceholder.typicode.com/posts")
       // .then(res=>console.log(res));
-      .then(res => this.setState({posts: res}));
+      .then(res => this.setState({posts: res.data}));
 
   }
 
   render() {
     const postsMap = this.state.posts.map((post) => {
-      return <p key={post.id}>post.title</p>
+      return <p key={post.id}>{post.title}</p>
     })
     return (
       <div>
-        post
+        {postsMap}
       </div>
     );
   }

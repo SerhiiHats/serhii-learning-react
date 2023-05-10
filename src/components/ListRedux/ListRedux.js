@@ -48,7 +48,6 @@ class ListRedux extends Component {
             }
           }>ADD Item
           </button>
-          <br/>
           <button id={"bnt-add-text"} onClick={
             () => {
               dispatch(removeITEM_creator());
@@ -73,5 +72,5 @@ const mapStateToProps = (store) => {
 }
 
 
-export default connect(mapStateToProps)(ListRedux);  //HOC//high order component;
+export default connect(mapStateToProps)(ListRedux);  //HOC//higher order component;
 

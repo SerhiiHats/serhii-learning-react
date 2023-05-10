@@ -21,6 +21,8 @@ import NameTextArea from "../NameTextArea/NameTextArea";
 import NameSelect from "../NameSelect/NameSelect";
 import FormFeedback from "../FormFeedback/FormFeedback";
 import ListRedux from "../ListRedux/ListRedux";
+import ToDoAnsynchron from "../ToDoAnsynchron/ToDoAnsynchron";
+import FuncComp from "../FuncComp/FuncComp";
 
 
 class App extends Component {
@@ -271,6 +273,25 @@ class App extends Component {
             {this.props.dispatch.log}
             <Header/>
             <button  onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
+
+            <div className='lesson4'>
+              <div className='left-card'>
+                <p>component: TO DO Ansynsynch</p>
+              </div>
+              <div className='right-card'>
+                <ToDoAnsynchron/>
+
+              </div>
+            </div>
+            <div className='lesson4'>
+              <div className='left-card'>
+                <p>component: FuncComp</p>
+              </div>
+              <div className='right-card'>
+                <FuncComp name={"Sergey!!!!"}/>
+
+              </div>
+            </div>
 
           </div>
         </main>
