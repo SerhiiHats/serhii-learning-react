@@ -1,6 +1,7 @@
 import {Component} from "react";
-import "./Post.css";
+import "./Post.scss";
 import axios from "axios";
+import Loader from "../Loader/Loader";
 
 class Post extends Component {
 
@@ -10,18 +11,17 @@ class Post extends Component {
 
   componentDidMount() {
     axios("https://jsonplaceholder.typicode.com/posts")
-      // .then(res=>console.log(res));
-      .then(res => this.setState({posts: res.data}));
-
+      .then(response => this.setState({posts: response.data}));
   }
 
   render() {
     const postsMap = this.state.posts.map((post) => {
-      return <p key={post.id}>{post.title}</p>
+      return <p key={post.id}>{post.id} : {post.title}</p>
     })
     return (
-      <div>
-        {postsMap}
+      <div className={"component-post"}>
+        <div className={"viewLoader"}>{!this.state.posts.length && <Loader/>}</div>
+        {this.state.posts.length && postsMap}
       </div>
     );
   }

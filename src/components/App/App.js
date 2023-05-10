@@ -1,5 +1,5 @@
 import logo from '../../logo.svg';
-import './App.css';
+import './App.scss';
 import WelcomeSimple from '../WelcomeSimple/WelcomeSimple';
 import Clock from '../Clock/Clock';
 import MyFirstComponent from "../MyFirstComponent/MyFirstComponent";
@@ -23,6 +23,7 @@ import FormFeedback from "../FormFeedback/FormFeedback";
 import ListRedux from "../ListRedux/ListRedux";
 import ToDoAnsynchron from "../ToDoAnsynchron/ToDoAnsynchron";
 import FuncComp from "../FuncComp/FuncComp";
+import Post from "../Post/Post";
 
 
 class App extends Component {
@@ -83,7 +84,7 @@ class App extends Component {
 
         <main>
           <div className="main-container">
-            <div className='lesson1'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p className={"number-lesson"}>first lesson:</p>
                 <p>component: MyFirstComponent</p>
@@ -93,7 +94,7 @@ class App extends Component {
                 <MyFirstComponent color="blue" size={18}/>
               </div>
             </div>
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p className={"number-lesson"}>secondary lesson:</p>
                 <p>component: WelcomeSimple</p>
@@ -103,7 +104,7 @@ class App extends Component {
                 <WelcomeSimple/>
               </div>
             </div>
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Clock</p>
                 <p>-color from Array</p>
@@ -114,7 +115,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: ListRedux</p>
               </div>
@@ -123,7 +124,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: CounterSimple</p>
               </div>
@@ -132,7 +133,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: CounterCollback</p>
               </div>
@@ -141,7 +142,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Counter</p>
               </div>
@@ -150,7 +151,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: ConditionalRendering</p>
                 <p>unwatch likes with Parent</p>
@@ -163,7 +164,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Conditional Rendering Ternary</p>
               </div>
@@ -173,7 +174,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Change Color Text</p>
               </div>
@@ -189,7 +190,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson3'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p className={"number-lesson"}>third lesson:</p>
                 <p>component: Simple List</p>
@@ -203,7 +204,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson3'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: List</p>
                 <p>with input, button add list, clean input, press Enter to add</p>
@@ -215,17 +216,17 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson4'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p className={"number-lesson"}>fourth lesson:</p>
-                <p>component: Control Forms</p>
+                <p>component:NameForm Control Forms</p>
               </div>
               <div className='right-card'>
                 <NameForm/>
               </div>
             </div>
 
-            <div className='lesson4'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Not control Forms</p>
               </div>
@@ -234,7 +235,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson4'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Control TextArea</p>
               </div>
@@ -243,7 +244,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson4'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Select</p>
               </div>
@@ -252,7 +253,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson4'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: Form feedback</p>
               </div>
@@ -261,9 +262,30 @@ class App extends Component {
               </div>
             </div>
 
-            <div className='lesson2'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p className={"number-lesson"}>fourth lesson:</p>
+                <p>component: Post from axios and write to inner state without Redux</p>
+              </div>
+              <div className='right-card'>
+              <Post/>
+              </div>
+            </div>
+
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>homework TODO:</p>
+                <p>component: TODO from axios and write to inner State</p>
+              </div>
+              <div className='right-card'>
+                todo
+              </div>
+            </div>
+
+
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>fifth lesson:</p>
                 <p>component: ListRedux</p>
               </div>
               <div className='right-card'>
@@ -274,7 +296,7 @@ class App extends Component {
             <Header/>
             <button  onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
 
-            <div className='lesson4'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: TO DO Ansynsynch</p>
               </div>
@@ -283,7 +305,7 @@ class App extends Component {
 
               </div>
             </div>
-            <div className='lesson4'>
+            <div className='lesson'>
               <div className='left-card'>
                 <p>component: FuncComp</p>
               </div>
