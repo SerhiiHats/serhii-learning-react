@@ -11,6 +11,7 @@ const listReducer = (list = initialStore.list, action) =>{
       // tempArr.pop();
       list.pop();
       return [...list];
+      // return tempArr;
     }
     default: {
       return list;

@@ -65,7 +65,7 @@ class ListRedux extends Component {
 
 
 const mapStateToProps = (store) => {
-  console.log(store)
+  // console.log(store)
   return {
     list: store.list,
   }
