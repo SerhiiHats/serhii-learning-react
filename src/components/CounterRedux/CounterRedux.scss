@@ -1,0 +1,21 @@
+.counter-redux {
+  span {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  button {
+    margin-right: 10px;
+    user-select: none;
+  }
+
+  button:first-child:active {
+    background-color: green;
+  }
+
+  button:nth-child(2):active {
+    background-color: red;
+  }
+
+}

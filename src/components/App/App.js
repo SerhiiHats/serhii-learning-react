@@ -25,6 +25,7 @@ import ToDoAnsynchron from "../ToDoAnsynchron/ToDoAnsynchron";
 import FuncComp from "../FuncComp/FuncComp";
 import Post from "../Post/Post";
 import ToDoFromState from "../ToDoFromState/ToDoFromState";
+import CounterRedux from "../CounterRedux/CounterRedux";
 
 
 class App extends Component {
@@ -293,6 +294,18 @@ class App extends Component {
                 <ListRedux/>
               </div>
             </div>
+
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>fifth lesson:</p>
+                <p>component: Counter Redux</p>
+              </div>
+              <div className='right-card'>
+                <CounterRedux/>
+
+              </div>
+            </div>
+
             {this.props.dispatch.log}
             <Header/>
             <button onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
