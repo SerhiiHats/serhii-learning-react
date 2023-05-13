@@ -65,7 +65,7 @@ class CounterRedux extends Component {
           <button onClick={() => dispatch(DecActCreator(DECREMENT))}>--Redux</button>
           <button onClick={() => dispatch(RndActCreator(RND))}>RND Redux</button>
           <button onClick={() => dispatch(ResetActCreator(RESET))}>Reset Redux</button>
-          <span>{countFR.count}</span>
+          <span style={{color: countFR.arrayOfColor[countFR.index]}}>{countFR.count}</span>
         </div>
         }
 
