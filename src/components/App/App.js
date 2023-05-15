@@ -26,6 +26,7 @@ import FuncComp from "../FuncComp/FuncComp";
 import Post from "../Post/Post";
 import ToDoFromState from "../ToDoFromState/ToDoFromState";
 import CounterRedux from "../CounterRedux/CounterRedux";
+import PostAsynchronous from "../PostAsynchronous/PostAsynchronous";
 
 
 class App extends Component {
@@ -306,19 +307,39 @@ class App extends Component {
               </div>
             </div>
 
-            {this.props.dispatch.log}
-            <Header/>
-            <button onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>fifth lesson:</p>
+                <p>component: Header Redux</p>
+              </div>
+              <div className='right-card'>
+
+                {this.props.dispatch.log}
+                <Header/>
+                <button onClick={() => dispatch(changeTitle("change Store From App"))}>Click from App</button>
+              </div>
+            </div>
 
             <div className='lesson'>
               <div className='left-card'>
+                <p className={"number-lesson"}>sixth lesson:</p>
+                <p>component: Post Asynchronous</p>
+              </div>
+              <div className='right-card'>
+                <PostAsynchronous/>
+              </div>
+            </div>
+
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>seventh lesson:</p>
                 <p>component: TO DO Ansynsynch</p>
               </div>
               <div className='right-card'>
                 <ToDoAnsynchron/>
-
               </div>
             </div>
+
             <div className='lesson'>
               <div className='left-card'>
                 <p>component: FuncComp</p>
