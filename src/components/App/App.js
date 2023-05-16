@@ -27,6 +27,8 @@ import Post from "../Post/Post";
 import ToDoFromState from "../ToDoFromState/ToDoFromState";
 import CounterRedux from "../CounterRedux/CounterRedux";
 import PostAsynchronous from "../PostAsynchronous/PostAsynchronous";
+import {iconTypes} from "../../constants/icons";
+import {Icon} from "../Icon/Icon";
 
 
 class App extends Component {
@@ -337,6 +339,17 @@ class App extends Component {
               </div>
               <div className='right-card'>
                 <ToDoAnsynchron/>
+              </div>
+            </div>
+
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>seventh lesson:</p>
+                <p>component: something</p>
+              </div>
+              <div className='right-card'>
+               <Icon type ={iconTypes.plus}/>
+               <Icon type ={iconTypes.cross}/>
               </div>
             </div>
 
