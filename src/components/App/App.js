@@ -356,11 +356,21 @@ class App extends Component {
 
             <div className='lesson'>
               <div className='left-card'>
-                <p>component: FuncComp</p>
+                <p className={"number-lesson"}>eight lesson:</p>
+                <p>component: simple FuncComp</p>
               </div>
               <div className='right-card'>
                 <FuncComp name={"Sergey!!!!"}/>
+              </div>
+            </div>
 
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>eight lesson:</p>
+                <p>component: funcComp counter from Redux</p>
+              </div>
+              <div className='right-card'>
+              something
               </div>
             </div>
 
