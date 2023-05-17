@@ -8,7 +8,7 @@ const initialStore = {
   },
 
   toDoItemFromStore: {
-    itemsFromStore: [],
+    itemsToDoFromStore: [],
     loading: false,
   },
 

@@ -1,24 +1,41 @@
 import React, {Component} from 'react';
-import store from "../../redux/configStore";
 import {connect} from "react-redux";
-import {toDoListAC} from "./toDoAction";
+import {toDoListAction, toDoListCompletedAction} from "./toDoAsyncAction";
+import styles from "./ToDoAnsynchron.module.scss";
+import Loader from "../Loader/Loader";
 
 class ToDoAnsynchron extends Component {
 
+  state = {
+    visible: true,
+  }
+
+  handlerTodo(e) {
+    const index = e.target.id - 1;
+    const {dispatch} = this.props;
+    dispatch(toDoListCompletedAction(index));
+  }
+
   componentDidMount() {
-    this.props.dispatch(toDoListAC())
+    const {dispatch} = this.props;
+    dispatch(toDoListAction());
   }
 
   render() {
+    const {toDo} = this.props;
 
-    // const itemsMap = this.props.
-    console.log(store)
-    // const {toDo} = this.props
-    console.log(this.props)
+    const items = toDo.itemsToDoFromStore.map(elem =>{
+      return <p onClick={(e)=>{
+        this.handlerTodo(e)}
+      }  className={`${elem.completed ? styles.listCompleted : styles.listUncompleted} ${styles.rowTodo}` }
+                key={elem.id} id={elem.id}>{elem.id} - {elem.title}</p>
+    });
+
     return (
-      <div>
-        List
-
+      <div className={styles.containerToDo}>
+        <div className={styles.viewLoader}>{toDo.loading && <Loader/>}</div>
+        <button className={styles.btnForView} onClick={() => this.setState({visible: !this.state.visible})}>Показать/скрыть</button>
+        {this.state.visible && items}
       </div>
     );
   }
@@ -26,7 +43,7 @@ class ToDoAnsynchron extends Component {
 
 const mapStateToProps = (store) =>{
   return {
-    toDo: store.toDoItemFromStore
+    toDo: store.toDo,
   }
 }
 

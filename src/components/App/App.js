@@ -335,10 +335,11 @@ class App extends Component {
             <div className='lesson'>
               <div className='left-card'>
                 <p className={"number-lesson"}>seventh lesson:</p>
-                <p>component: TO DO Ansynsynch</p>
+                <p>component: TO DO Asynchronous</p>
               </div>
               <div className='right-card'>
                 <ToDoAnsynchron/>
+
               </div>
             </div>
 
