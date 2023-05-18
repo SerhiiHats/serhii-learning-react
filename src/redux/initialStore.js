@@ -1,6 +1,7 @@
 const initialStore = {
   title: "Redux",
   list: ["red", "orange", "yellow", "green", "blue", "indigo", "violet"],
+  countForFuncComp: 0,
 
   postsFromStore: {
     postItems: [],
@@ -19,6 +20,8 @@ const initialStore = {
     visible: true,
     timeUpdate: 0
   },
+
+
 }
 
 export default initialStore;

@@ -1,0 +1,18 @@
+.btnCounter{
+  padding: 7px;
+  margin: 10px;
+  user-select: none;
+
+}
+
+.btnCounterFirst{
+  &:active{
+    background-color: green;
+  }
+}
+
+.btnCounterSecond{
+  &:active{
+    background-color: red;
+  }
+}

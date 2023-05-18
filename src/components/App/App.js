@@ -29,6 +29,7 @@ import CounterRedux from "../CounterRedux/CounterRedux";
 import PostAsynchronous from "../PostAsynchronous/PostAsynchronous";
 import {iconTypes} from "../../constants/icons";
 import {Icon} from "../Icon/Icon";
+import FuncCompCountRedux from "../FuncCompCountRedux/FuncCompCountRedux";
 
 
 class App extends Component {
@@ -371,6 +372,7 @@ class App extends Component {
               </div>
               <div className='right-card'>
               something
+                <FuncCompCountRedux/>
               </div>
             </div>
 
