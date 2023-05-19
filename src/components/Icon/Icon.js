@@ -15,6 +15,7 @@ export const Icon = (props) => {
       height={icon.height}
       width={icon.width}
       viewBox={icon.viewBox}
+      style={style}
       {...rest}
     >
       {icon.body}
@@ -22,4 +23,4 @@ export const Icon = (props) => {
   );
 };
 
-export default Icon;
+// export default Icon;

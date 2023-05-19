@@ -7,9 +7,8 @@ const FuncComp = (props) => {
   const [time, setTime] = useState(new Date().toLocaleTimeString()); //если нужно доп переменные обьявляем ее и ее функцию обработчик в кортедже
 
   useEffect(()=>{
-    let timeId;
-    setTimeout(()=>{
-    timeId =  setTime(new Date().toLocaleTimeString());
+    let timeId =  setTimeout(()=>{
+    setTime(new Date().toLocaleTimeString());
     }, 1000);                                           //componentDidUpdate()
 
     return ()=>{                                            //componentWillMount()

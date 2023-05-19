@@ -30,6 +30,7 @@ import PostAsynchronous from "../PostAsynchronous/PostAsynchronous";
 import {iconTypes} from "../../constants/icons";
 import {Icon} from "../Icon/Icon";
 import FuncCompCountRedux from "../FuncCompCountRedux/FuncCompCountRedux";
+import {Button} from "../Button/Button";
 
 
 class App extends Component {
@@ -350,8 +351,12 @@ class App extends Component {
                 <p>component: something</p>
               </div>
               <div className='right-card'>
-               <Icon type ={iconTypes.plus}/>
-               <Icon type ={iconTypes.cross}/>
+               <Icon type={iconTypes.plus} color="red" className="dfdfdf"/>
+               <Icon type={iconTypes.cross} size="50px" id="22"/>
+                <Icon type={iconTypes.keys} color="blue"/>
+                <Button clasName={'castomClass'} id = "id" iconType={iconTypes.keys}>first</Button>
+                <Button clasName={'castomClass'} size="small" color ="primary" id="id">first</Button>
+                <Button clasName={''}>second</Button>
               </div>
             </div>
 
