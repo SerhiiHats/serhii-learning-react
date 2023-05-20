@@ -7,7 +7,7 @@ class Post extends Component {
 
   state = {
     posts: [],
-    visible: true,
+    visible: false,
   }
 
 

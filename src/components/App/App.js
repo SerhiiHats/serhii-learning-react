@@ -351,10 +351,10 @@ class App extends Component {
                 <p>component: something</p>
               </div>
               <div className='right-card'>
-               <Icon type={iconTypes.plus} color="red" className="dfdfdf"/>
-               <Icon type={iconTypes.cross} size="50px" id="22"/>
-                <Icon type={iconTypes.keys} color="blue"/>
-                <Button clasName={'castomClass'} id = "id" iconType={iconTypes.keys}>first</Button>
+               <Icon type={iconTypes.home} size="20px" color="violet" className="dfdfdf"/>
+               <Icon type={iconTypes.folder} size="50px" color="#F005F4" size="50px" id="22"/>
+                <Icon type={iconTypes.keys} size="30px" color="green"/>
+                <Button clasName={'castomClass'} id = "id1" iconType={iconTypes.keys}>first</Button>
                 <Button clasName={'castomClass'} size="small" color ="primary" id="id">first</Button>
                 <Button clasName={''}>second</Button>
               </div>

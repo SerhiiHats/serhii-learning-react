@@ -7,7 +7,7 @@ import Loader from "../Loader/Loader";
 class ToDoAnsynchron extends Component {
 
   state = {
-    visible: true,
+    visible: false,
   }
 
   handlerTodo(e) {

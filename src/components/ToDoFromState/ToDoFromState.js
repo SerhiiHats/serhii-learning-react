@@ -7,7 +7,7 @@ import Loader from "../Loader/Loader";
 class ToDoFromState extends Component {
   state = {
     toDoFromState: [],
-    visible: true,
+    visible: false,
   }
 
   handlerTodo(e) {

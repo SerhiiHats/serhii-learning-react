@@ -8,7 +8,7 @@ import {connect} from "react-redux";
 class PostAsynchronous extends Component {
   state = {
     posts: [],
-    visible: true,
+    visible: false,
   }
 
 

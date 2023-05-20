@@ -1,5 +1,5 @@
 export const iconTypes = {
-  "plus": 'plus',
-  "cross": 'cross',
-  "keys": "keys",
+  "home": 'home',
+  "folder": 'folder',
+  "keys": 'keys',
 }

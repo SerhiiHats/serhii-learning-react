@@ -1,14 +1,13 @@
 import React from 'react';
 export const iconsDefs = {
-  plus: {
+  home: {
     className: 'icon icon-home2',
     viewBox: '0 0 32 32',
     width: '1em',
     height: '1em',
-    body: (<path
-      d="M16 1l-16 16 3 3 3-3v13h8v-6h4v6h8v-13l3 3 3-3-16-16zM16 14c-1.105 0-2-0.895-2-2s0.895-2 2-2c1.105 0 2 0.895 2 2s-0.895 2-2 2z"></path>)
+    body: (<path d="M16 1l-16 16 3 3 3-3v13h8v-6h4v6h8v-13l3 3 3-3-16-16zM16 14c-1.105 0-2-0.895-2-2s0.895-2 2-2c1.105 0 2 0.895 2 2s-0.895 2-2 2z"></path>)  //<g fill="red" stroke="none">
   },
-  cross: {
+  folder: {
     className: "icon icon-folder-open",
     viewBox: "0 0 32 32",
     width: '1em',
