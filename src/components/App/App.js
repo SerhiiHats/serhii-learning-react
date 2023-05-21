@@ -31,6 +31,7 @@ import {iconTypes} from "../../constants/icons";
 import {Icon} from "../Icon/Icon";
 import FuncCompCountRedux from "../FuncCompCountRedux/FuncCompCountRedux";
 import {Button} from "../Button/Button";
+import ListComposition from "../ListComposition/ListComposition";
 
 
 class App extends Component {
@@ -348,15 +349,40 @@ class App extends Component {
             <div className='lesson'>
               <div className='left-card'>
                 <p className={"number-lesson"}>seventh lesson:</p>
-                <p>component: something</p>
+                <p>component: Icon Button with render icon</p>
+              </div>
+              <div className='right-card seven-lesson'>
+                <Icon type={iconTypes.home} size={"30px"} color="#eca9a9" className="holivid"/>
+                <Icon type={iconTypes.folder} color="#89badf" size={"30px"} id="22" datamonth="april"/>
+                <Icon type={iconTypes.keys} size="30px" color={"#d399e7"}/>
+                <Icon type={iconTypes.phone} size={"30px"} color={"#7297d6"}/>
+                <Icon type={iconTypes.out} size={"30px"} color={"#eca9a9"}/>
+                <Icon type={iconTypes.in} size={"30px"} color={"#d1e3bc"}/>
+                <Icon type={iconTypes.facebook} size={"30px"} color={"#030ffc"}/>
+                <Icon type={iconTypes.instagram} size="30px" color={"#ba66d7"}/>
+                <Icon type={iconTypes.youtube} size={"30px"} color={"#f53434"}/>
+                <Icon type={iconTypes.whatsapp} size={"30px"} color={"#97da48"}/>
+                <Icon type={iconTypes.telegram} size={"30px"} color={"#4e89ef"}/>
+                <Icon type={iconTypes.facebook2} size={"30px"} color={"#1559cc"}/>
+                <Button clasName={'castomClass'} id="id1" iconType={iconTypes.home} size={"30px"} color="blue">first</Button>
+                <Button clasName={'castomClass'} iconType={iconTypes.in} size={"30px"} color="green" id="id">sign in</Button>
+                <Button clasName={'test'} iconType={iconTypes.out} size={"30px"} color="red">sign out</Button>
+                <Button className={'castomClass'} color={"green"} iconType={iconTypes.phone}>call me</Button>
+                <Button className={'castomClass'} size={"small"} color={"primary"} >second</Button>
+                <Button className={'castomClass'} size={"small"} color={"secondary"} >second</Button>
+              </div>
+            </div>
+
+
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>seventh lesson:</p>
+                <p>component: ListComposition</p>
               </div>
               <div className='right-card'>
-               <Icon type={iconTypes.home} size="20px" color="violet" className="dfdfdf"/>
-               <Icon type={iconTypes.folder} size="50px" color="#F005F4" size="50px" id="22"/>
-                <Icon type={iconTypes.keys} size="30px" color="green"/>
-                <Button clasName={'castomClass'} id = "id1" iconType={iconTypes.keys}>first</Button>
-                <Button clasName={'castomClass'} size="small" color ="primary" id="id">first</Button>
-                <Button clasName={''}>second</Button>
+                something
+                <ListComposition/>
+
               </div>
             </div>
 
@@ -376,7 +402,7 @@ class App extends Component {
                 <p>component: funcComp counter from Redux</p>
               </div>
               <div className='right-card'>
-              something
+                something
                 <FuncCompCountRedux/>
               </div>
             </div>

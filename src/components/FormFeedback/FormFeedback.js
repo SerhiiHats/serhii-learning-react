@@ -51,7 +51,7 @@ class FormFeedback extends Component {
 
     return (
       <div className={"ContainerForm"}>
-        <form className={"FormFeedback"}>
+        <form id={"firstForm"} className={"FormFeedback"}>
           <div className={"Row"}>
             <label>ім'я
               <input type={"text"} name={"name"} id={"name"} placeholder={"Enter your name..."} onChange={(e) => {

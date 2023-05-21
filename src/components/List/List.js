@@ -1,5 +1,5 @@
 import {Component} from "react";
-// import {v4 as uuidv4} from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 import "./List.css"
 
 class List extends Component {
@@ -21,7 +21,8 @@ class List extends Component {
   render() {
     const {arrayForList, addHandlerList} = this.props;
     const liElement = arrayForList.map((elem, index) => {
-      return <li className={"item-li-" + index} key={index}>{index} - {elem}</li>
+      // return <li className={"item-li-" + index} key={index}>{index} - {elem}</li>
+      return <li className={"item-li-" + index} key={uuidv4()}>{index} - {elem}</li>
     })
 
     return (

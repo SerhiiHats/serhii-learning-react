@@ -7,11 +7,11 @@ export const Icon = (props) => {
     return null;
   }
 
-  const {className,color, size, ...rest } = props
-  const style = {fill:color, fontSize: size}
+  const {className, color, size, ...rest } = props;
+  const style = {fill:color, fontSize: size};
   return (
     <svg
-      className={className}
+      className={icon.className}
       height={icon.height}
       width={icon.width}
       viewBox={icon.viewBox}
