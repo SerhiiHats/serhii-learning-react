@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Button} from "../Button/Button";
 import {iconTypes} from "../../constants/icons";
+import styles from "./FormFunc.module.scss";
 
 const FormFunc = (props) => {
 
@@ -11,7 +12,6 @@ const FormFunc = (props) => {
   })
 
   function handlerValue(e) {
-    console.log("From form for list: " + e.target.value);
     setvalueInput(e.target.value)
   }
 
@@ -23,8 +23,6 @@ const FormFunc = (props) => {
     }
     const tempValueInput = valueInput.trim();
     if (tempValueInput.length) {
-      console.log(tempValueInput)
-      console.log(Date.now())
       addItem({value: tempValueInput, id: Date.now()})
       setvalueInput("");
     }
@@ -32,9 +30,8 @@ const FormFunc = (props) => {
 
 
   return (
-    <form id={"toDolistTask"} name={"listTask"} onSubmit={(e) => handlerSubmit(e)}>
-    {/*<form>*/}
-      <div className={"test"}>
+    <form className={styles.containerForm} id={"toDoListForm"} name={"listTask"} onSubmit={(e) => handlerSubmit(e)}>
+      <div className={styles.rowForm}>
         <input type={"text"} placeholder={"add new task"} className={"test2"} onChange={(e) => handlerValue(e)}
                value={valueInput}/>
         <Button type={"submit"} iconType={iconTypes.plus} className={"test3"}>Add</Button>

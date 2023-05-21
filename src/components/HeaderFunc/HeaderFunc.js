@@ -1,13 +1,14 @@
 import React from 'react';
 import FormFunc from "../FormFunc/FormFunc";
+import styles from "./HeaderFunc.module.scss";
 
-const HeaderFunc = ({ className, ...rest }) => {
-    return (
-      <div className={className}>
-        <h1>Task List</h1>
-        <FormFunc {...rest}/>
-      </div>
-    );
+const HeaderFunc = ({...rest}) => {
+  return (
+    <div className={styles.containerHeader}>
+      <h1>Todo List With <span>State</span></h1>
+      <FormFunc {...rest}/>
+    </div>
+  );
 
 };
 

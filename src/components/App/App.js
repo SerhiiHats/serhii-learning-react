@@ -31,7 +31,7 @@ import {iconTypes} from "../../constants/icons";
 import {Icon} from "../Icon/Icon";
 import FuncCompCountRedux from "../FuncCompCountRedux/FuncCompCountRedux";
 import {Button} from "../Button/Button";
-import ListComposition from "../ListComposition/ListComposition";
+import MainBoardToDoFunction from "../MainBoardToDoFunction/MainBoardToDoFunction";
 
 
 class App extends Component {
@@ -380,8 +380,7 @@ class App extends Component {
                 <p>component: ListComposition</p>
               </div>
               <div className='right-card'>
-                something
-                <ListComposition/>
+                <MainBoardToDoFunction/>
 
               </div>
             </div>
