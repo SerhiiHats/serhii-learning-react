@@ -1,22 +1,68 @@
-.about{
+.about {
   color: #ff7f7f;
   padding: 20px;
   text-align: center;
 }
 
-.blog{
+.blog {
   color: blue;
+  padding: 20px;
+  text-align: center;
+
+  & > p {
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  & > a {
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+}
+
+.singleBlog {
+  color: #774328;
+  padding: 20px;
+  text-align: center;
+
+  & > p {
+    font-size: 20px;
+    margin: 20px;
+    text-align: left;
+    color: #282c34;
+  }
+
+  & > .linkForEdit{
+    text-align: left;
+  }
+}
+
+.createBlog {
+  color: black;
   padding: 20px;
   text-align: center;
 }
 
-.home{
+.editBlog {
+  color: gold;
+  padding: 20px;
+  text-align: center;
+}
+
+.home {
   color: #94b21b;
   padding: 20px;
   text-align: center;
 }
 
-.notFound{
+.notFound {
   color: black;
   padding: 20px;
   text-align: center;

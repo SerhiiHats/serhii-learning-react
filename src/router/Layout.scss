@@ -13,8 +13,8 @@ $footerPaddingTop: $size * 2.5;
 
   & > a {
     color: $colorDefault;
-    margin: $size *3;
-    font-size: $size*2;
+    margin: $size * 3;
+    font-size: $size * 2;
     text-decoration: none;
 
     &:hover {
@@ -36,8 +36,8 @@ $footerPaddingTop: $size * 2.5;
 .footer {
   height: $heightFooter;
   padding-top: $footerPaddingTop;
-  background-color: #282c34;
+  background-color: $colorBg;
   text-align: center;
   color: $colorDefault;
-  font-size: $size*2;
+  font-size: $size * 2;
 }

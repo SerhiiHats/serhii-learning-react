@@ -4,9 +4,11 @@ import HomePage from "../../pages/HomePage";
 import BlogPage from "../../pages/BlogPage";
 import AboutPage from "../../pages/AboutPage";
 import NotfoundPage from "../../pages/NotfoundPage";
-import {Link} from "react-router-dom";
 import Layout from "../../router/Layout";
 import App from "../App/App";
+import SingleBlogPage from "../../pages/SingleBlogPage";
+import CreatePostPage from "../../pages/CreatePostPage";
+import EditPostPage from "../../pages/EditPostPage";
 
 const AppRouter = () => {
   return (
@@ -20,6 +22,9 @@ const AppRouter = () => {
           {/*<Route path={"/"} element={<HomePage/>}/>*/}
           <Route index element={<HomePage/>}/>
           <Route path={"/posts"} element={<BlogPage/>}/>
+          <Route path={"/posts/:id"} element={<SingleBlogPage/>}/>
+          <Route path={"/posts/:id/edit"} element={<EditPostPage/>}/>
+          <Route path={"/posts/new"} element={<CreatePostPage/>}/>
           <Route path={"/about"} element={<AboutPage/>}/>
           <Route path={"/all"} element={<App/>}/>
           <Route path={"*"} element={<NotfoundPage/>}/>
