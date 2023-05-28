@@ -1,0 +1,43 @@
+@import "../index";
+
+$heightHeader: $size * 6;
+$headerPaddingTop: $size * 2.5;
+$heightFooter: $size * 6;
+$footerPaddingTop: $size * 2.5;
+
+.header {
+  height: $heightHeader;
+  background-color: $colorBg;
+  text-align: center;
+  padding-top: $headerPaddingTop;
+
+  & > a {
+    color: $colorDefault;
+    margin: $size *3;
+    font-size: $size*2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & > .active {
+    color: $colorActive;
+    cursor: default;
+  }
+}
+
+
+.containerMain {
+  min-height: calc(100vh - $heightHeader - $headerPaddingTop - $heightFooter - $footerPaddingTop);
+}
+
+.footer {
+  height: $heightFooter;
+  padding-top: $footerPaddingTop;
+  background-color: #282c34;
+  text-align: center;
+  color: $colorDefault;
+  font-size: $size*2;
+}

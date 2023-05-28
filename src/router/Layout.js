@@ -1,23 +1,25 @@
 import React from 'react';
-import style from "../components/AppRouter/AppRouter.module.scss";
-import {Link, NavLink, Outlet} from "react-router-dom";
+import "./Layout.scss";
+import {NavLink, Outlet} from "react-router-dom";
+import '../index.scss';
 
 const Layout = () => {
   return (
     <>
-      <header className={style.header}>
+      <header className={"header"}>
         <NavLink to={"/"}>Home</NavLink>
         <NavLink to={"/posts"}>Blog</NavLink>
         <NavLink to={"/about"}>About</NavLink>
+        <NavLink to={"/all"}>All my task</NavLink>
         {/*<Link to={"/about"}>About</Link>*/}
         {/*<a href={"/about"}>About</a>*/}
       </header>
 
-      <main className={style.containerMain}>
+      <main className={"containerMain"}>
         <Outlet/>
       </main>
 
-      <footer className={style.footer}>2023 - my footer</footer>
+      <footer className={"footer"}>2023 - my footer</footer>
     </>
   );
 };

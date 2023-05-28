@@ -1,5 +1,4 @@
 import React from 'react';
-import style from "./AppRouter.module.scss"
 import {Route, Routes} from "react-router";
 import HomePage from "../../pages/HomePage";
 import BlogPage from "../../pages/BlogPage";
@@ -7,6 +6,7 @@ import AboutPage from "../../pages/AboutPage";
 import NotfoundPage from "../../pages/NotfoundPage";
 import {Link} from "react-router-dom";
 import Layout from "../../router/Layout";
+import App from "../App/App";
 
 const AppRouter = () => {
   return (
@@ -21,6 +21,7 @@ const AppRouter = () => {
           <Route index element={<HomePage/>}/>
           <Route path={"/posts"} element={<BlogPage/>}/>
           <Route path={"/about"} element={<AboutPage/>}/>
+          <Route path={"/all"} element={<App/>}/>
           <Route path={"*"} element={<NotfoundPage/>}/>
         </Route>
       </Routes>
