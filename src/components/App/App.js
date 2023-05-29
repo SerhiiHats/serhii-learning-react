@@ -32,6 +32,8 @@ import {Icon} from "../Icon/Icon";
 import FuncCompCountRedux from "../FuncCompCountRedux/FuncCompCountRedux";
 import {Button} from "../Button/Button";
 import MainBoardToDoFunction from "../MainBoardToDoFunction/MainBoardToDoFunction";
+import {NavLink} from "react-router-dom";
+import {IconCast} from "../IconCast/IconCast";
 
 
 class App extends Component {
@@ -364,12 +366,48 @@ class App extends Component {
                 <Icon type={iconTypes.whatsapp} size={"30px"} color={"#97da48"}/>
                 <Icon type={iconTypes.telegram} size={"30px"} color={"#4e89ef"}/>
                 <Icon type={iconTypes.facebook2} size={"30px"} color={"#1559cc"}/>
-                <Button clasName={'castomClass'} id="id1" iconType={iconTypes.home} size={"30px"} color="blue">first</Button>
-                <Button clasName={'castomClass'} iconType={iconTypes.in} size={"30px"} color="green" id="id">sign in</Button>
+                <Button clasName={'castomClass'} id="id1" iconType={iconTypes.home} size={"30px"}
+                        color="blue">first</Button>
+                <Button clasName={'castomClass'} iconType={iconTypes.in} size={"30px"} color="green" id="id">sign
+                  in</Button>
                 <Button clasName={'test'} iconType={iconTypes.out} size={"30px"} color="red">sign out</Button>
                 <Button className={'castomClass'} color={"green"} iconType={iconTypes.phone}>call me</Button>
-                <Button className={'castomClass'} size={"small"} color={"primary"} >second</Button>
-                <Button className={'castomClass'} size={"small"} color={"secondary"} >second</Button>
+                <Button className={'castomClass'} size={"small"} color={"primary"}>second</Button>
+                <Button className={'castomClass'} size={"small"} color={"secondary"}>second</Button><br/>
+                <NavLink to="/"><Icon type={iconTypes.film} size={"30px"} color={"grey"}/>MovieMagic.UA</NavLink>
+                <NavLink to="/"><Icon type={iconTypes.film} size={"30px"} color={"#E30914"}/>MovieMagic.UA</NavLink>
+                <br/>
+                <NavLink to="/"> <Icon type={iconTypes.home} size={"30px"} color={"grey"}/>Home</NavLink>
+                <NavLink to="/"> <Icon type={iconTypes.home} size={"30px"} color={"#E30914"}/>Home</NavLink>
+                <NavLink to='/discovery'><Icon type={iconTypes.compass} size={"30px"}
+                                               color={"grey"}/>Discovery</NavLink>
+                <NavLink to='/discovery'><Icon type={iconTypes.compass} size={"30px"}
+                                               color={"#E30914"}/>Discovery</NavLink>
+                <NavLink to='/fresh'><Icon type={iconTypes.spinner} size={"30px"} color={"grey"}/>Fresh movies</NavLink>
+                <NavLink to='/fresh'><Icon type={iconTypes.spinner} size={"30px"} color={"#E30914"}/>Fresh
+                  movies</NavLink>
+                <NavLink to='/trending'><Icon type={iconTypes.fire} size={"30px"} color={"grey"}/>Trending now</NavLink>
+                <NavLink to='/trending'><Icon type={iconTypes.fire} size={"30px"} color={"#E30914"}/>Trending
+                  now</NavLink>
+                <br/>
+                <NavLink to='/comedy'><Icon type={iconTypes.happy2} size={"30px"} color={"grey"}/>Comedy</NavLink>
+                <NavLink to='/comedy'><Icon type={iconTypes.happy2} size={"30px"} color={"#E30914"}/>Comedy</NavLink>
+                <NavLink to='/cartoons'><Icon type={iconTypes.manWomen} size={"30px"} color={"grey"}/>Cartoons</NavLink>
+                <NavLink to='/cartoons'><Icon type={iconTypes.manWomen} size={"30px"}
+                                              color={"#E30914"}/>Cartoons</NavLink>
+                <NavLink to='/fantasy'><Icon type={iconTypes.magicWand} size={"30px"} color={"grey"}/>Fantasy</NavLink>
+                <NavLink to='/fantasy'><Icon type={iconTypes.magicWand} size={"30px"}
+                                             color={"#E30914"}/>Fantasy</NavLink>
+                <NavLink to='/biography'><Icon type={iconTypes.hipster2} size={"30px"}
+                                               color={"grey"}/>Biography</NavLink>
+                <NavLink to='/biography'><Icon type={iconTypes.hipster2} size={"30px"}
+                                               color={"#E30914"}/>Biography</NavLink>
+                <br/>
+                <NavLink to='/auth'><Icon type={iconTypes.enter} size={"30px"} color={"grey"}/>Login</NavLink>
+                <NavLink to='/auth'><Icon type={iconTypes.enter} size={"30px"} color={"#E30914"}/>Login</NavLink>
+                <NavLink to='/'><Icon type={iconTypes.exit} size={"30px"} color={"grey"}/>Logout</NavLink>
+                <NavLink to='/'><Icon type={iconTypes.exit} size={"30px"} color={"#E30914"}/>Logout</NavLink>
+                <IconCast type={iconTypes.home}/>
               </div>
             </div>
 
