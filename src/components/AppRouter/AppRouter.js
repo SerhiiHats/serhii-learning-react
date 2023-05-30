@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes} from "react-router";
+import {Navigate, Route, Routes} from "react-router";
 import HomePage from "../../pages/HomePage";
 import BlogPage from "../../pages/BlogPage";
 import AboutPage from "../../pages/AboutPage";
@@ -26,6 +26,7 @@ const AppRouter = () => {
           <Route path={"/posts/:id/edit"} element={<EditPostPage/>}/>
           <Route path={"/posts/new"} element={<CreatePostPage/>}/>
           <Route path={"/about"} element={<AboutPage/>}/>
+          {/*<Route path={"/about-us"} element={<Navigate to={"/about"} replace={true}/>}/>*/}
           <Route path={"/all"} element={<App/>}/>
           <Route path={"*"} element={<NotfoundPage/>}/>
         </Route>

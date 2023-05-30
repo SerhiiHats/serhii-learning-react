@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import style from "./pagesStyle.module.scss";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 const BlogPage = () => {
 
   const [posts, setPosts] = useState([]);
+  const location = useLocation();
 
   useEffect(()=>{
+
     axios("https://jsonplaceholder.typicode.com/posts")
       .then(response=>setPosts(response.data));
   }, []);
