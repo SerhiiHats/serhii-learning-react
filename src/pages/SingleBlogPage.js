@@ -26,7 +26,6 @@ const SingleBlogPage = () => {
       <p><button onClick={goBack}>Go back</button>
         {/*<button onClick={goHome}>Go Home</button>*/}
         <Link to={"/"}>go Home</Link>
-
       </p>
       {post && (<><h1>{post.title}</h1><p>{post.body}</p></>)}
       <p className={styles.linkForEdit}> <Link to={`/posts/${id}/edit`}>Edit this post</Link></p>

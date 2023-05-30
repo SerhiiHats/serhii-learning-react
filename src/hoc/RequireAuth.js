@@ -2,7 +2,7 @@ import React from 'react';
 import {useLocation} from "react-router-dom";
 import {Navigate} from "react-router";
 
-const RequireAuth = (children) => {
+const RequireAuth = ({children}) => {
   const location = useLocation();
   const auth = false;
 

@@ -18,6 +18,7 @@ const BlogPage = () => {
     <div className={style.blog}>
       <h1>Blog </h1>
       <p>This is a demo website page Blog with React-router-dom library</p>
+      <Link to={"/posts/new"} >Create new post</Link>
       {posts.map((post)=>{
         return(<Link key={post.id} to={`/posts/${post.id}`}>
           <li>{post.title}</li>

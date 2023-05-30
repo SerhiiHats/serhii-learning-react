@@ -25,17 +25,21 @@ const AppRouter = () => {
           <Route index element={<HomePage/>}/>
           <Route path={"/posts"} element={<BlogPage/>}/>
           <Route path={"/posts/:id"} element={<SingleBlogPage/>}/>
-          <Route path={"/posts/:id/edit"} element={<EditPostPage/>}/>
+          <Route path={"/posts/:id/edit"} element={
+            <RequireAuth>
+              <EditPostPage/>
+            </RequireAuth>}/>
           <Route path={"/posts/new"} element={
             <RequireAuth>
               <CreatePostPage/>
             </RequireAuth>}/>
           <Route path={"/about"} element={<AboutPage/>}/>
           {/*<Route path={"/about-us"} element={<Navigate to={"/about"} replace={true}/>}/>*/}
-          <Route path={"/all"} element={<App/>}/>
-
+          <Route path={"/all"} element={
+            <RequireAuth>
+              <App/>
+            </RequireAuth>}/>
           <Route path={"/login"} element={<LoginPage/>}/>
-
           <Route path={"*"} element={<NotfoundPage/>}/>
         </Route>
       </Routes>
