@@ -4,7 +4,7 @@ export const AuthContext = createContext(null);
 export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
 
-  const sigIn = (newUser, cb) => {
+  const signIn = (newUser, cb) => {
     setUser(newUser);
     cb();
   }
@@ -14,7 +14,7 @@ export const AuthProvider = ({children}) => {
     cb();
   }
 
-  const value = {user, sigIn, signOut}
+  const value = {user, signIn, signOut} //  Это value может получить любой компонент через чук useContext, приложение нужно обернуть в AuthProvider
 
   return (
     <AuthContext.Provider value={value}>

@@ -1,23 +1,33 @@
 import React, {useState} from 'react';
 import {Navigate, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const LoginPage = () => {
-  const [login, setLogin] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const {signIn, user} = useAuth();
 
   const fromPage = location.state?.from?.pathname || "/";
 
-  console.log(location);
-  console.log(fromPage);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const user = form.username.value;
+
+    signIn(user, () => {navigate(fromPage, {replace: true})});
+  }
 
   return (
     <div>
       <h1>Login page</h1>
-      {fromPage}
-      <button style={{width: 70, height: 30, margin: 20}} onClick={()=>setLogin(!login)}>{login ? "Log out" : "Log in"}</button>
-      {/*{login && navigate(fromPage, {state:true})}*/}
+      <p>you going from: {fromPage}</p>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name: <input name="username"/>
+        </label>
+        <button style={{width: 70, height: 30, margin: 20}}>{user ? "Log out" : "Log in"}</button>
+      </form>
     </div>
   );
 };

@@ -11,10 +11,11 @@ import CreatePostPage from "../../pages/CreatePostPage";
 import EditPostPage from "../../pages/EditPostPage";
 import LoginPage from "../../pages/LoginPage";
 import RequireAuth from "../../hoc/RequireAuth";
+import {AuthProvider} from "../../hoc/AuthProvider";
 
 const AppRouter = () => {
   return (
-    <>
+    <AuthProvider>
 
       {/*<div className={style.div}>*/}
       {/*  <h1>Get started with React-Router 6</h1>*/}
@@ -43,7 +44,7 @@ const AppRouter = () => {
           <Route path={"*"} element={<NotfoundPage/>}/>
         </Route>
       </Routes>
-    </>
+    </AuthProvider>
   );
 };
 
