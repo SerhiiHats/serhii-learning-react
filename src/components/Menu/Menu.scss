@@ -1,0 +1,25 @@
+@import "src/index.scss";
+
+.wrapMenu{
+  display: flex;
+  flex-direction: column;
+  padding: $size;
+
+  a{
+    color: $colorDefault;
+    text-decoration: none;
+    margin-bottom: $size;
+    font-weight: bold;
+    letter-spacing: $size * 0.1;
+    text-transform: uppercase;
+    transition: 0.2s;
+
+    &:hover{
+      color: $colorActive2;
+    }
+  }
+
+  .active{
+    color: $colorActive2;
+  }
+}

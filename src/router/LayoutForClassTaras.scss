@@ -1,0 +1,44 @@
+@import "../index";
+
+$heightHeaderNew: $size * 7;
+$heightFooterNew: $size * 7;
+
+.headerNew{
+  box-sizing: border-box;
+  height: $heightHeaderNew;
+  background-color: $colorBg;
+  color: $colorDefault;
+  text-align: center;
+  padding-top: $size * 2;
+  text-transform: uppercase;
+  letter-spacing: $size * 0.5;
+  word-spacing: $size * 0.5;
+  font-weight: bold;
+  font-size: $size * 2;
+}
+
+.containerMenuWithMain{
+  display: flex;
+
+  .menu{
+    width: $size * 30;
+    background-color: $colorBg3;
+    min-height: calc(100vh - $heightHeaderNew - $heightFooterNew);
+  }
+
+  .main{
+    width: calc(100% - $size * 30);
+  }
+}
+
+.footerNew{
+  box-sizing: border-box;
+  height: $heightFooterNew;
+  background-color: $colorBg;
+  color: $colorDefault;
+  text-align: center;
+  padding-top: $size * 2;
+  letter-spacing: $size * 0.1;
+  word-spacing: $size * 0.1;
+  font-size: $size * 2;
+}

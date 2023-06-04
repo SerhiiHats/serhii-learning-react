@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import store from './redux/configStore';
 import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./components/AppRouter/AppRouter";
+import AppRouterWithTaras from "./components/AppRouterWithTaras/AppRouterWithTaras";
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,8 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       {/*<App/>*/}
-      <AppRouter/>
+      {/*<AppRouter/>*/}
+      <AppRouterWithTaras/>
     </BrowserRouter>
   </Provider>
 
