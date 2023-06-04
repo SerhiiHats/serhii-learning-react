@@ -34,6 +34,7 @@ import {Button} from "../Button/Button";
 import MainBoardToDoFunction from "../MainBoardToDoFunction/MainBoardToDoFunction";
 import {NavLink} from "react-router-dom";
 import {IconCast} from "../IconCast/IconCast";
+import InputWithCustomHook from "../InputWithCustomHook/InputWithCustomHook";
 
 
 class App extends Component {
@@ -441,6 +442,17 @@ class App extends Component {
               <div className='right-card'>
                 something
                 <FuncCompCountRedux/>
+              </div>
+            </div>
+
+            <div className='lesson'>
+              <div className='left-card'>
+                <p className={"number-lesson"}>nine lesson:</p>
+                <p>component: InputWithCustomHook (Input with custom hooks)</p>
+              </div>
+              <div className='right-card'>
+                Input custom hooks
+                <InputWithCustomHook/>
               </div>
             </div>
 
