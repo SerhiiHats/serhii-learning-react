@@ -21,6 +21,7 @@ const initialStore = {
     timeUpdate: 0
   },
 
+  auth: false,
 
 }
 

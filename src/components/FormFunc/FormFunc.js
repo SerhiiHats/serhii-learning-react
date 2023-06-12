@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Button} from "../Button/Button";
 import {iconTypes} from "../../constants/icons";
 import styles from "./FormFunc.module.scss";
@@ -7,9 +7,6 @@ const FormFunc = (props) => {
 
   const [valueInput, setvalueInput] = useState("");
 
-  useEffect(() => {
-    document.forms.listTask.elements[0].focus();
-  })
 
   function handlerValue(e) {
     setvalueInput(e.target.value)

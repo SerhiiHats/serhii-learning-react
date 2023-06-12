@@ -10,6 +10,8 @@ const Menu = () => {
       <NavLink to={"/lesson2"}>Lesson 2</NavLink>
       <NavLink to={"/lesson3"}>Lesson 3</NavLink>
       <NavLink to={"/posts"}>Posts</NavLink>
+      <NavLink to={"/auth"}>Auth</NavLink>
+      <NavLink to={"/all"}>All</NavLink>
     </div>
   );
 };
