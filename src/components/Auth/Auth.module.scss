@@ -1,6 +1,12 @@
 .containerForm {
   color: white;
   padding: 20px 0;
+
+  .isAuth{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+  }
 }
 
 .formAuth {
@@ -40,9 +46,10 @@
       text-align: right;
 
       .btnSubmit{
+        width: 100px;
         background-color: #B7CF52;
         color: #FFFFFF;
-        padding: 12px;
+        padding: 12px 0;
         font-weight: bold;
         font-size: 16px;
         border: none;

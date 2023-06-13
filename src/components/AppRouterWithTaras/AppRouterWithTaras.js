@@ -6,6 +6,8 @@ import PostAsynchronous from "../PostAsynchronous/PostAsynchronous";
 import MyFirstComponent from "../MyFirstComponent/MyFirstComponent";
 import App from "../App/App";
 import Auth from "../Auth/Auth";
+import RequireAuth from "../../hoc/RequireAuth";
+import RequireAuthTaras from "../../hoc/RequireAuthTaras";
 
 const AppRouterWithTaras = () => {
   return (
@@ -17,8 +19,11 @@ const AppRouterWithTaras = () => {
         <Route path={"lesson3"} element={<HomePage/>}/>
         <Route path={"posts"} element={<PostAsynchronous/>}/>
         <Route path={"auth"} element={<Auth/>}/>
-        <Route path={"all"} element={<App/>}/>
-
+        <Route path={"all"} element={
+          <RequireAuthTaras>
+            <App/>
+          </RequireAuthTaras>
+        }/>
       </Route>
     </Routes>
   );

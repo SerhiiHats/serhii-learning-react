@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from "./Auth.module.scss"
 import {useDispatch, useSelector} from "react-redux";
-import {loginAC} from "./authActions";
+import {loginAC, logoutAC} from "./authActions";
 
 const Auth = () => {
 
@@ -10,14 +10,23 @@ const Auth = () => {
   const auth = useSelector(state => state.auth);
   console.log(auth)
 
-  const handleSubmit = (e) =>{
+  const handleSubmitLogin = (e) => {
     e.preventDefault();
     dispatch(loginAC());
     console.log(auth)
   }
 
+  const handleSubmitLogout = (e) => {
+    e.preventDefault();
+    dispatch(logoutAC());
+    console.log(auth)
+  }
+
+  const isAuth = auth ? "You are logged in!" : "You not auth!"
+
   return (
     <div className={styles.containerForm}>
+      <p className={styles.isAuth}>where: {isAuth}</p>
 
       <form className={styles.formAuth}>
         <h3>Please Authenticate</h3>
@@ -32,12 +41,14 @@ const Auth = () => {
           </label>
         </div>
         <div className={styles.row}>
-          <input onClick={(e) => handleSubmit(e)} className={styles.btnSubmit} type={"submit"}
-                 value={"Підтвердити"}/>
+          {auth ? <input onClick={(e) => handleSubmitLogout(e)} className={styles.btnSubmit} type={"submit"}
+                         value={"log Out"}/> :
+            <input onClick={(e) => handleSubmitLogin(e)} className={styles.btnSubmit} type={"submit"}
+                   value={"log In"}/>}
         </div>
       </form>
 
-      <p style={{color:"black"}}>where: {auth ? "You are logged in!" : "You not auth!"}</p>
+      <p className={styles.isAuth}>where: {isAuth}</p>
 
     </div>
   );

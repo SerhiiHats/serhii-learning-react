@@ -35,6 +35,7 @@ import MainBoardToDoFunction from "../MainBoardToDoFunction/MainBoardToDoFunctio
 import {NavLink} from "react-router-dom";
 import {IconCast} from "../IconCast/IconCast";
 import InputWithCustomHook from "../InputWithCustomHook/InputWithCustomHook";
+import titleReducer from "../Title/titleReducer";
 
 
 class App extends Component {
@@ -465,8 +466,10 @@ class App extends Component {
 }
 
 
-const map = () => {
-
+const map = (store) => {
+return {
+  title: store.title,
+}
 }
 
 export default connect(map)(App);
