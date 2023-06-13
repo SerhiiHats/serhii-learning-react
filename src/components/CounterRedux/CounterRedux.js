@@ -76,7 +76,7 @@ class CounterRedux extends Component {
 
 const mapStateToProps = (store)=>{
   return{
-    countFR: store.countFR
+    countFR: store.counterFR
   }
 }
 

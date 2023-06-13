@@ -1,24 +1,24 @@
 import initialStore from "../../redux/initialStore";
 import {TODO_COMPLETED, TODO_ERROR, TODO_LOADING_END, TODO_LOADING_START} from "./toDoAsyncAction";
 
-const toDoAsyncReducer = (toDo = initialStore.toDoItemFromStore, action) => {
+const toDoAsyncReducer = (toDoItemFromStore = initialStore.toDoItemFromStore, action) => {
      switch(action.type){
        case TODO_LOADING_START:{
          return {
-           ...toDo,
+           ...toDoItemFromStore,
            loading: true,
          }
        }
        case TODO_LOADING_END:{
          return {
-           ...toDo,
+           ...toDoItemFromStore,
            loading: false,
            itemsToDoFromStore: action.payload,
          };
        }
        case TODO_ERROR:{
          return {
-           ...toDo,
+           ...toDoItemFromStore,
            loading: false,
            error: "error",
          };
@@ -26,7 +26,7 @@ const toDoAsyncReducer = (toDo = initialStore.toDoItemFromStore, action) => {
 
        case TODO_COMPLETED:{
          const index = action.payload;
-         const {itemsToDoFromStore} = toDo;
+         const {itemsToDoFromStore} = toDoItemFromStore;
 
          const updateItems = [...itemsToDoFromStore];
 
@@ -36,12 +36,12 @@ const toDoAsyncReducer = (toDo = initialStore.toDoItemFromStore, action) => {
          }
 
          return {
-           ...toDo,
+           ...toDoItemFromStore,
            itemsToDoFromStore: updateItems,
          };
        }
 
-       default: return toDo;
+       default: return toDoItemFromStore;
   }
 }
 export default toDoAsyncReducer;

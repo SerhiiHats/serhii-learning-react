@@ -11,8 +11,9 @@ import authReducer from "../components/Auth/authReducer";
 export default combineReducers({
     title: titleReducer,
     list: listReducer,
-    toDo: toDoAsyncReducer,
-    countFR: counterReducer,
+    postsFromStore: postAsyncReducer,
+    toDoItemFromStore: toDoAsyncReducer,
+    counterFR: counterReducer,
     postsFR: postAsyncReducer,
     countForFuncComp: countReducerForFuncComp,
     auth: authReducer,

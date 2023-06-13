@@ -10,6 +10,12 @@ const Auth = () => {
   const auth = useSelector(state => state.auth);
   console.log(auth)
 
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    dispatch(loginAC());
+    console.log(auth)
+  }
+
   return (
     <div className={styles.containerForm}>
 
@@ -26,16 +32,12 @@ const Auth = () => {
           </label>
         </div>
         <div className={styles.row}>
-          <input onClick={(e) => {
-            e.preventDefault();
-            dispatch(loginAC)
-
-          }} className={styles.btnSubmit} type={"submit"}
+          <input onClick={(e) => handleSubmit(e)} className={styles.btnSubmit} type={"submit"}
                  value={"Підтвердити"}/>
         </div>
       </form>
 
-      <p style={{color:"black"}}>where: {auth ? "auth" : "nothing"}</p>
+      <p style={{color:"black"}}>where: {auth ? "You are logged in!" : "You not auth!"}</p>
 
     </div>
   );

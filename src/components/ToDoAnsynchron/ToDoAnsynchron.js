@@ -43,7 +43,7 @@ class ToDoAnsynchron extends Component {
 
 const mapStateToProps = (store) =>{
   return {
-    toDo: store.toDo,
+    toDo: store.toDoItemFromStore,
   }
 }
 
