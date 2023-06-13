@@ -5,6 +5,7 @@ import toDoAsyncReducer from "../components/ToDoAnsynchron/ToDoAsyncReducer";
 import counterReducer from "../components/CounterRedux/counteReducer";
 import postAsyncReducer from "../components/PostAsynchronous/postAsyncReducer";
 import countReducerForFuncComp from "../components/FuncCompCountRedux/countReducerForFuncComp";
+import authReducer from "../components/Auth/authReducer";
 
 
 export default combineReducers({
@@ -14,6 +15,7 @@ export default combineReducers({
     countFR: counterReducer,
     postsFR: postAsyncReducer,
     countForFuncComp: countReducerForFuncComp,
+    auth: authReducer,
   },
 );
 

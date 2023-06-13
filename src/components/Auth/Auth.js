@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "./Auth.module.scss"
+import {useDispatch, useSelector} from "react-redux";
+import {loginAC} from "./authActions";
 
 const Auth = () => {
+
+
+  const dispatch = useDispatch();
+  const auth = useSelector(state => state.auth);
+  console.log(auth)
+
   return (
     <div className={styles.containerForm}>
 
@@ -18,10 +26,17 @@ const Auth = () => {
           </label>
         </div>
         <div className={styles.row}>
-          <input onClick={(e) => e.preventDefault()} className={styles.btnSubmit} type={"submit"}
+          <input onClick={(e) => {
+            e.preventDefault();
+            dispatch(loginAC)
+
+          }} className={styles.btnSubmit} type={"submit"}
                  value={"Підтвердити"}/>
         </div>
       </form>
+
+      <p style={{color:"black"}}>where: {auth ? "auth" : "nothing"}</p>
+
     </div>
   );
 };
