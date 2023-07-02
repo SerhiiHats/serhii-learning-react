@@ -2,18 +2,21 @@ import React, {useState} from 'react';
 import styles from "./Auth.module.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {loginAC, logoutAC} from "./authActions";
+import {useNavigate} from "react-router";
 
 const Auth = () => {
 
 
   const dispatch = useDispatch();
   const auth = useSelector(state => state.auth);
+  const navigation = useNavigate();
   console.log(auth)
 
   const handleSubmitLogin = (e) => {
     e.preventDefault();
     dispatch(loginAC());
     console.log(auth)
+    navigation(-1);
   }
 
   const handleSubmitLogout = (e) => {

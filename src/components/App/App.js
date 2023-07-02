@@ -368,11 +368,11 @@ class App extends Component {
                 <Icon type={iconTypes.whatsapp} size={"30px"} color={"#97da48"}/>
                 <Icon type={iconTypes.telegram} size={"30px"} color={"#4e89ef"}/>
                 <Icon type={iconTypes.facebook2} size={"30px"} color={"#1559cc"}/>
-                <Button clasName={'castomClass'} id="id1" iconType={iconTypes.home} size={"30px"}
+                <Button className={'castomClass'} id="id1" iconType={iconTypes.home} size={"30px"}
                         color="blue">first</Button>
-                <Button clasName={'castomClass'} iconType={iconTypes.in} size={"30px"} color="green" id="id">sign
+                <Button className={'castomClass'} iconType={iconTypes.in} size={"30px"} color="green" id="id">sign
                   in</Button>
-                <Button clasName={'test'} iconType={iconTypes.out} size={"30px"} color="red">sign out</Button>
+                <Button className={'test'} iconType={iconTypes.out} size={"30px"} color="red">sign out</Button>
                 <Button className={'castomClass'} color={"green"} iconType={iconTypes.phone}>call me</Button>
                 <Button className={'castomClass'} size={"small"} color={"primary"}>second</Button>
                 <Button className={'castomClass'} size={"small"} color={"secondary"}>second</Button><br/>
