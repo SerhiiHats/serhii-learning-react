@@ -26,5 +26,5 @@ export const iconTypes = {
   "enter": 'enter',
   "exit": 'exit',
   "film": 'film',
-
+  "cartShopping": 'cartShopping',
 }

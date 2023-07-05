@@ -36,6 +36,8 @@ import {NavLink} from "react-router-dom";
 import {IconCast} from "../IconCast/IconCast";
 import InputWithCustomHook from "../InputWithCustomHook/InputWithCustomHook";
 import titleReducer from "../Title/titleReducer";
+import cartShopping from "../../assets/img/shopping-cart-icon.svg"
+
 
 
 class App extends Component {
@@ -410,6 +412,10 @@ class App extends Component {
                 <NavLink to='/'><Icon type={iconTypes.exit} size={"30px"} color={"grey"}/>Logout</NavLink>
                 <NavLink to='/'><Icon type={iconTypes.exit} size={"30px"} color={"#E30914"}/>Logout</NavLink>
                 <IconCast type={iconTypes.home}/>
+                {/*<img src={require("../../assets/img/shopping-cart-icon.svg")} alt={"cart-shopping"} title={"cart-shopping"}/>*/}
+                <img style={{width: 100, fill: "blue"}}  src={cartShopping} alt={"cart-shopping"} title={"cart-shopping"}/>
+                <Icon type={iconTypes.cartShopping} size={"30px"} color={"#E30914"} />
+                <Icon type={iconTypes.cartShopping} size={"30px"} color={"#ffffff"} />
               </div>
             </div>
 
