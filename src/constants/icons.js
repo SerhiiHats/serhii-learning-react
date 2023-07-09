@@ -27,4 +27,5 @@ export const iconTypes = {
   "exit": 'exit',
   "film": 'film',
   "cartShopping": 'cartShopping',
+  "delete": 'delete',
 }
