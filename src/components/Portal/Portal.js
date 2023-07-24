@@ -1,24 +1,14 @@
-import {Component} from 'react';
-import ReactDOM from "react-dom";
+import { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
-class Portal extends Component {
+const Portal = ({ children }) => {
 
-  constructor(props) {
-    super(props);
-    this.modal = document.getElementById("modal");
-  }
+  useEffect(() => {
+    document.body.style.overflow = "hidden";  // блокирует прокрутку
+    return () => document.body.style.overflow = "";
+  }, [])
 
-  componentDidMount() {
-    document.body.style.overflow = "hidden";
-  }
-
-  componentWillUnmount() {
-    document.body.style.overflow = "";
-  }
-
-  render() {
-    return ReactDOM.createPortal(super.children, this.modal);
-  }
+  return ReactDOM.createPortal(children, document.getElementById('modal'));
 }
 
 export default Portal;

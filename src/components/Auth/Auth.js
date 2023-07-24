@@ -3,6 +3,7 @@ import styles from "./Auth.module.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {loginAC, logoutAC} from "./authActions";
 import {useNavigate} from "react-router";
+import Modal from "../Modal/Modal";
 
 const Auth = () => {
 
@@ -28,6 +29,7 @@ const Auth = () => {
   const isAuth = auth ? "You are logged in!" : "You not auth!"
 
   return (
+    <Modal text={
     <div className={styles.containerForm}>
       <p className={styles.isAuth}>where: {isAuth}</p>
 
@@ -54,7 +56,9 @@ const Auth = () => {
       <p className={styles.isAuth}>where: {isAuth}</p>
 
     </div>
-  );
+    }
+    closeHandler={()=>navigation("/")}
+    /> );
 };
 
 export default Auth;

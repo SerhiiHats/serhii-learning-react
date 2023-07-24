@@ -10,11 +10,11 @@ const Modal = (props) => {
   return (
     <div>
       <Portal>
-        <div className="modal-wrapper" onClick={closeHandler}></div>
-        <div className="modal">
+        <div className={styles.modalWrapper} onClick={closeHandler}></div>
+        <div className={styles.modal}>
           {text}
           <div className="modal-btn">
-            <button className="btn" onClick={closeHandler}>Close</button>
+            <button className={styles.modalBtn} onClick={closeHandler}>Close</button>
             {action}
           </div>
         </div>
