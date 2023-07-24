@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
+import ReactDOM from "react-dom";
 
 class Portal extends Component {
 
@@ -16,7 +17,7 @@ class Portal extends Component {
   }
 
   render() {
-    return ReactDOM.createPortal(this.props.children, this.modal);
+    return ReactDOM.createPortal(super.children, this.modal);
   }
 }
 
